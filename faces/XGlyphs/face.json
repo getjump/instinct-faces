@@ -1,0 +1,36 @@
+{
+ "title": "X3 Glyphs",
+ "fonts": {
+  "dec": {
+   "family": "Orbitron",
+   "size": 9,
+   "weight": 700,
+   "tracking": 2,
+   "chars": "$digits:",
+   "t": 0.3
+  },
+  "date": {
+   "family": "Orbitron",
+   "size": 7,
+   "weight": 500,
+   "tracking": 1,
+   "chars": "$upper$digits·",
+   "t": 0.15
+  },
+  "ss": {
+   "family": "Orbitron",
+   "size": 10,
+   "weight": 700,
+   "chars": "$digits-",
+   "t": 0.35
+  },
+  "sec": {
+   "family": "Orbitron",
+   "size": 6,
+   "weight": 500,
+   "tracking": 1,
+   "chars": "SEC",
+   "t": 0.3
+  }
+ }
+}

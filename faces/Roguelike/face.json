@@ -1,0 +1,5 @@
+{"title": "Roguelike", "permissions": ["UserProfile"],
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 42, "fit": ["14:32", 80], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits >%-"}
+ }}

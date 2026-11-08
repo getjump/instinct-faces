@@ -1,0 +1,6 @@
+{"title": "DStarryNight",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 44, "fit": ["22:47", 88], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits :-"},
+  "cd": {"family": "Jersey 10", "size": 26, "fit": ["8:31", 34], "chars": "$digits:-"}
+ }}

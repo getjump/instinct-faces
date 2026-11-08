@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Дизеринг-солнце</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Дизеринг-солнце»: пейзаж из точечного растра, солнце на дуге дня показывает время суток, время на переднем холме, фаза луны в окошке">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="d-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="d-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="d-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+<pattern id="d-d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="1" width="1" height="1" fill="currentColor"></rect><rect y="1" width="1" height="1" fill="currentColor"></rect></pattern>
+<pattern id="d-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect></pattern>
+<pattern id="d-d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect></pattern>
+<pattern id="d-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect></pattern>
+</defs>
+<g clip-path="url(#d-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<rect x="0" y="0" width="176" height="44" fill="url(#d-d75)"></rect>
+<rect x="0" y="44" width="176" height="26" fill="url(#d-d50)"></rect>
+<rect x="0" y="70" width="176" height="26" fill="url(#d-d25)"></rect>
+<rect x="0" y="96" width="176" height="26" fill="url(#d-d12)"></rect>
+<path d="M18 122 A70 50 0 0 1 158 122" fill="none" stroke="{{bg}}" stroke-width="3"></path>
+<path d="M18 122 A70 50 0 0 1 158 122" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="1 2"></path>
+<circle cx="132" cy="83" r="15" fill="{{bg}}"></circle>
+<g stroke="currentColor" stroke-width="1.4" stroke-linecap="square">
+<line x1="143" y1="83" x2="146" y2="83"></line>
+<line x1="139.8" y1="75.2" x2="141.9" y2="73.1"></line>
+<line x1="132" y1="72" x2="132" y2="69"></line>
+<line x1="124.2" y1="75.2" x2="122.1" y2="73.1"></line>
+<line x1="121" y1="83" x2="118" y2="83"></line>
+<line x1="124.2" y1="90.8" x2="122.1" y2="92.9"></line>
+<line x1="132" y1="94" x2="132" y2="97"></line>
+<line x1="139.8" y1="90.8" x2="141.9" y2="92.9"></line>
+</g>
+<circle cx="132" cy="83" r="7" fill="currentColor"></circle>
+<polygon points="0,124 22,116 44,121 70,110 96,118 122,108 146,116 176,111 176,176 0,176" fill="{{bg}}"></polygon>
+<polygon points="0,124 22,116 44,121 70,110 96,118 122,108 146,116 176,111 176,176 0,176" fill="url(#d-d50)"></polygon>
+<polygon points="0,142 30,132 58,138 92,126 124,134 152,128 176,132 176,176 0,176" fill="currentColor"></polygon>
+<text x="88" y="163" text-anchor="middle" fill="{{bg}}" font-family="'Jersey 10', monospace" font-size="34" textLength="68" lengthAdjust="spacingAndGlyphs">14:32</text>
+<text x="88" y="173" text-anchor="middle" fill="{{bg}}" font-family="Silkscreen, monospace" font-size="8">FRI 06</text>
+<rect width="176" height="176" fill="url(#d-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#d-sub)">
+<rect x="113" y="1" width="62" height="62" fill="currentColor"></rect>
+<circle cx="144" cy="28" r="13" fill="{{bg}}"></circle>
+<circle cx="150" cy="27" r="13.5" fill="currentColor"></circle>
+<rect x="126" y="14" width="1" height="1" fill="{{bg}}"></rect>
+<rect x="158" y="12" width="1" height="1" fill="{{bg}}"></rect>
+<rect x="130" y="44" width="1" height="1" fill="{{bg}}"></rect>
+<rect x="160" y="45" width="1" height="1" fill="{{bg}}"></rect>
+<text x="144" y="56" text-anchor="middle" fill="{{bg}}" font-family="Silkscreen, monospace" font-size="8">NEW 3D</text>
+<rect x="113" y="1" width="62" height="62" fill="url(#d-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29'
+    };
+  }
+}
+</script>
+</body>
+</html>

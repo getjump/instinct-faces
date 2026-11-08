@@ -1,0 +1,7 @@
+{"title": "N2 Visa",
+ "fake": "stays timeline (in/out days of the 180-day window) is the design's demo pattern, no real stay data on the watch",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits :/"},
+  "big": {"family": "Jersey 10", "size": 36, "chars": "$digits"},
+  "zone": {"family": "Jersey 10", "size": 26, "chars": "INOUT"}
+ }}

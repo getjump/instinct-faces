@@ -1,0 +1,7 @@
+{"title": "MQR QR Time",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 24, "fit": ["14:32", 46], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits.- "},
+  "sec": {"family": "Jersey 10", "size": 26, "chars": "$digits-"},
+  "pay": {"family": "VT323", "size": 12, "chars": "TIME 0123456789:."}
+ }}

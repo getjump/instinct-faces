@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+<defs><pattern id="d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern></defs>
+<rect width="176" height="176" fill="#fff"/>
+<g fill="#000" font-family="Silkscreen, monospace" font-size="8" shape-rendering="auto">
+<text x="22" y="119">LOC</text>
+<text x="22" y="133">TYO</text>
+<text x="42" y="144">0</text>
+<text x="96" y="144" text-anchor="middle">12</text>
+<text x="150" y="144" text-anchor="end">24</text>
+</g>
+<rect x="42.5" y="113.5" width="107" height="5" fill="#fff" stroke="#000" stroke-width="1"/>
+<rect x="42" y="113" width="33" height="6" fill="url(#d50)"/>
+<rect x="120" y="113" width="30" height="6" fill="url(#d50)"/>
+<rect x="42.5" y="127.5" width="107" height="5" fill="#fff" stroke="#000" stroke-width="1"/>
+<rect x="42" y="127" width="27" height="6" fill="url(#d50)"/>
+<rect x="117" y="127" width="33" height="6" fill="url(#d50)"/>
+</svg>

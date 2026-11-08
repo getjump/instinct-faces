@@ -1,0 +1,8 @@
+{"title": "ASolar Solar Income",
+ "permissions": ["SensorHistory"],
+ "fake": "dotted forecast is a model curve; MIN income is solar intensity sum times 9",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 30, "fit": ["14:32", 56], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "SUNOWTDAY+MI$digits "},
+  "cur": {"family": "Jersey 10", "size": 26, "chars": "$digits%-"}
+ }}

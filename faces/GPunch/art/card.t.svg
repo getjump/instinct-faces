@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="98" viewBox="24 44 130 98" shape-rendering="crispEdges">
+<g fill="#000" font-family="Silkscreen, monospace" font-size="8">
+<text x="30" y="52">TIME CARD</text>
+</g>
+<polygon points="34.5,72.5 152.5,72.5 152.5,140.5 24.5,140.5 24.5,82.5" fill="none" stroke="#000" stroke-width="1"/>
+<g fill="#000" font-family="Silkscreen, monospace" font-size="8">
+<text x="29" y="91">8</text>
+<text x="29" y="104">4</text>
+<text x="29" y="117">2</text>
+<text x="29" y="130">1</text>
+</g>
+<g fill="#000" font-family="Silkscreen, monospace" font-size="8" text-anchor="middle">
+<text x="51" y="139">H</text>
+<text x="87" y="139">M</text>
+<text x="123" y="139">S</text>
+</g>
+<path d="M69.5 80V134M105.5 80V134" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="1 2"/>
+<path d="M40.5 110.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M40.5 123.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M54.5 84.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M54.5 97.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M54.5 110.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M54.5 123.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M76.5 97.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M76.5 110.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M76.5 123.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M90.5 84.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M90.5 97.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M90.5 110.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M90.5 123.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M112.5 97.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M112.5 110.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M112.5 123.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M126.5 84.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M126.5 97.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M126.5 110.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+<path d="M126.5 123.5h7v8h-7z" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 1"/>
+</svg>

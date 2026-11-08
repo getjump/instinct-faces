@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Солнечные часы</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Солнечные часы»: горизонтальный солнечный циферблат на широте Ташкента, тень гномона поворачивается и меняет длину по высоте солнца, высота солнца в окошке">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="sd-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="sd-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="sd-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+<pattern id="sd-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect></pattern>
+<pattern id="sd-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect></pattern>
+</defs>
+<g clip-path="url(#sd-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<path d="M32 108 A52 52 0 0 1 136 108 Z" fill="url(#sd-d12)"></path>
+<path d="M32 108 A52 52 0 0 1 136 108" fill="none" stroke="currentColor" stroke-width="1"></path>
+<path d="M28 108 H140" fill="none" stroke="currentColor" stroke-width="1"></path>
+<path d="{{ticks}}" fill="none" stroke="currentColor" stroke-width="1"></path>
+<g fill="currentColor" font-family="Silkscreen, monospace" font-size="8" text-anchor="middle">
+<text x="50" y="104">VI</text>
+<text x="65" y="83">IX</text>
+<text x="84" y="77">XII</text>
+<text x="103" y="83">III</text>
+<text x="118" y="104">VI</text>
+</g>
+<path d="{{penumbra}}" fill="url(#sd-d50)"></path>
+<path d="{{shadow}}" fill="currentColor"></path>
+<rect x="83" y="72" width="2" height="36" fill="currentColor"></rect>
+<circle cx="84" cy="108" r="3" fill="currentColor"></circle>
+<text x="88" y="146" text-anchor="middle" fill="currentColor" font-family="'Jersey 10', monospace" font-size="28" textLength="56" lengthAdjust="spacingAndGlyphs">{{time}}</text>
+<text x="88" y="160" text-anchor="middle" fill="currentColor" font-family="Silkscreen, monospace" font-size="8">{{date}}</text>
+<rect width="176" height="176" fill="url(#sd-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#sd-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<g fill="currentColor" text-anchor="middle">
+<text x="144" y="20" font-family="Silkscreen, monospace" font-size="8">ALT</text>
+<text x="144" y="44" font-family="'Jersey 10', monospace" font-size="26">{{alt}}</text>
+<text x="144" y="56" font-family="Silkscreen, monospace" font-size="8">SOLAR</text>
+</g>
+<circle cx="158" cy="26" r="2" fill="none" stroke="currentColor" stroke-width="1"></circle>
+<rect x="113" y="1" width="62" height="62" fill="url(#sd-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"demo":{"editor":"boolean","default":true,"section":"Анимация"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ t: Date.now() }), 100);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const demo = this.props.demo ?? true;
+    const nowMs = Date.now();
+    const now = new Date(nowMs);
+    const f = (v) => v.toFixed(1);
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    const mons = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const rad = Math.PI / 180;
+    const lat = 41.3 * rad;
+    const dec = -16 * rad;
+    const sl = Math.sin(lat);
+    let h;
+    if (demo) {
+      h = 7 + 10 * ((nowMs % 20000) / 20000);
+    } else {
+      h = now.getHours() + now.getMinutes() / 60;
+    }
+    const H = (h - 12) * 15 * rad;
+    const sinAlt = Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(H);
+    const alt = Math.asin(Math.max(-1, Math.min(1, sinAlt)));
+    const up = alt > 0.01;
+    const th = Math.atan2(sl * Math.sin(H), Math.cos(H));
+    const L = up ? Math.max(10, Math.min(48, 14 / Math.tan(alt))) : 0;
+    const cx = 84;
+    const cy = 108;
+    const sn = Math.sin(th);
+    const cs = Math.cos(th);
+    let shadow = 'M0 0';
+    let penumbra = 'M0 0';
+    if (up) {
+      shadow = 'M' + f(cx + 2 * cs) + ' ' + f(cy + 2 * sn) + 'L' + f(cx + L * sn) + ' ' + f(cy - L * cs) + 'L' + f(cx - 2 * cs) + ' ' + f(cy - 2 * sn) + 'Z';
+      penumbra = 'M' + f(cx + 5 * cs) + ' ' + f(cy + 5 * sn) + 'L' + f(cx + (L + 5) * sn) + ' ' + f(cy - (L + 5) * cs) + 'L' + f(cx - 5 * cs) + ' ' + f(cy - 5 * sn) + 'Z';
+    }
+    let ticks = '';
+    for (let hh = 6; hh <= 18; hh += 0.5) {
+      const Hh = (hh - 12) * 15 * rad;
+      const a = Math.atan2(sl * Math.sin(Hh), Math.cos(Hh));
+      const r1 = hh % 1 === 0 ? 40 : 46;
+      ticks += 'M' + f(cx + r1 * Math.sin(a)) + ' ' + f(cy - r1 * Math.cos(a)) + 'L' + f(cx + 52 * Math.sin(a)) + ' ' + f(cy - 52 * Math.cos(a));
+    }
+    let hr;
+    let mn;
+    if (demo) {
+      hr = Math.floor(h);
+      mn = Math.floor((h - hr) * 60);
+    } else {
+      hr = now.getHours();
+      mn = now.getMinutes();
+    }
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      ticks: ticks,
+      shadow: shadow,
+      penumbra: penumbra,
+      time: p2(hr) + ':' + p2(mn),
+      date: days[now.getDay()] + ' ' + p2(now.getDate()) + ' ' + mons[now.getMonth()],
+      alt: String(up ? Math.round(alt / rad) : 0)
+    };
+  }
+}
+</script>
+</body>
+</html>

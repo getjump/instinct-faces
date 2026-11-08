@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="36" viewBox="107 121 38 36" shape-rendering="crispEdges"><defs>
+<pattern id="d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" width="1" height="1" fill="#000"/><rect y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+</defs>
+<polygon points="110,154 144,154 127,124" fill="url(#d12)" stroke="#000" stroke-width="2" stroke-linejoin="miter" shape-rendering="auto"/></svg>

@@ -1,0 +1,6 @@
+{"title": "LSeasons Seasons",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 30, "fit": ["14:32", 54], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "mon": {"family": "Jersey 10", "size": 24, "chars": "$upper"}
+ }}

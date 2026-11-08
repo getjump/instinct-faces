@@ -1,0 +1,33 @@
+name: Face problem
+description: A face looks wrong, drains the battery or crashes
+labels: [face]
+body:
+  - type: input
+    id: face
+    attributes:
+      label: Face
+      description: Name from the gallery or the file name, e.g. LLife
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - Real watch
+        - Connect IQ simulator
+        - Gallery
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Watch model and firmware
+      placeholder: Instinct 3 Solar 45 mm, 18.xx
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected, what you saw, awake or asleep. A photo of the screen helps.
+    validations:
+      required: true

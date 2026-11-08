@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+<defs>
+<pattern id="sm-d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/></pattern>
+</defs>
+<g fill="url(#sm-d25)">
+<rect x="0" y="70" width="176" height="1"/>
+<rect x="0" y="82" width="176" height="1"/>
+<rect x="0" y="94" width="176" height="1"/>
+<rect x="0" y="106" width="176" height="1"/>
+<rect x="0" y="118" width="176" height="1"/>
+</g>
+<rect x="0" y="60" width="176" height="1" fill="#000"/>
+<rect x="0" y="129" width="176" height="1" fill="#000"/>
+</svg>

@@ -1,0 +1,54 @@
+{
+ "title": "N4 Japan",
+ "fonts": {
+  "time": {
+   "family": "Jersey 10",
+   "size": 24,
+   "fit": [
+    "14:32",
+    46
+   ],
+   "chars": "$time"
+  },
+  "cnt": {
+   "family": "Silkscreen",
+   "size": 8,
+   "chars": "WORD/$digits "
+  },
+  "kj": {
+   "family": "DotGothic16",
+   "size": 52,
+   "chars": "時計旅駅電車切符宿山海空雨雪風月星朝夜道茶水猫花橋町地図"
+  },
+  "kn": {
+   "family": "DotGothic16",
+   "size": 14,
+   "chars": "とけいたびえきでんしゃっぷやどまうみそらあめゆかぜつほさよるちずねこはな"
+  },
+  "tr": {
+   "family": "DotGothic16",
+   "size": 12,
+   "chars": "tokei /часыabпутешвинцяdnshэлкрpuбyогmмrджьzзcй",
+   "t": 0.4
+  },
+  "tyo": {
+   "family": "Jersey 10",
+   "size": 22,
+   "fit": [
+    "14:32",
+    40
+   ],
+   "chars": "$time"
+  },
+  "lab": {
+   "family": "Silkscreen",
+   "size": 8,
+   "chars": "TYO"
+  },
+  "tk": {
+   "family": "DotGothic16",
+   "size": 10,
+   "chars": "東京"
+  }
+ }
+}

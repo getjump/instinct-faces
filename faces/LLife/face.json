@@ -1,0 +1,6 @@
+{"title": "07 Game of Life",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 46, "fit": ["14:32", 108], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "gen": {"family": "Jersey 10", "size": 22, "chars": "$digits"}
+ }}

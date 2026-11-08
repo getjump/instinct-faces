@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "instinct-faces": {
+      "command": "uv",
+      "args": ["run", "--quiet", "--script", "tools/mcp_server.py"]
+    }
+  }
+}

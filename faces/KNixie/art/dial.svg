@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges"><defs><pattern id="d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/></pattern><pattern id="d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern></defs>
+<rect width="176" height="176" fill="#fff"/>
+<g fill="url(#d12)" stroke="#000" stroke-width="1.5" shape-rendering="auto"><rect x="16" y="68" width="30" height="50" rx="13"/><rect x="50" y="68" width="30" height="50" rx="13"/><rect x="92" y="68" width="30" height="50" rx="13"/><rect x="126" y="68" width="30" height="50" rx="13"/></g>
+<path d="M21 74Q24 70 28 70M55 74Q58 70 62 70M97 74Q100 70 104 70M131 74Q134 70 138 70" fill="none" stroke="#000" stroke-width="1" shape-rendering="auto"/>
+<rect x="12" y="118" width="148" height="4" fill="#000"/>
+<g fill="#000"><rect x="24" y="122" width="2" height="4"/><rect x="36" y="122" width="2" height="4"/><rect x="58" y="122" width="2" height="4"/><rect x="70" y="122" width="2" height="4"/><rect x="100" y="122" width="2" height="4"/><rect x="112" y="122" width="2" height="4"/><rect x="134" y="122" width="2" height="4"/><rect x="146" y="122" width="2" height="4"/></g>
+<text x="88" y="154" fill="#000" text-anchor="middle" font-family="Silkscreen, monospace" font-size="8" shape-rendering="auto">170V</text>
+<rect x="113" y="1" width="62" height="62" fill="#fff"/>
+<text x="144" y="56" text-anchor="middle" fill="#000" font-family="Silkscreen, monospace" font-size="8" shape-rendering="auto">SEC</text>
+</svg>

@@ -1,0 +1,8 @@
+{"title": "Brutal",
+ "fonts": {
+  "hh": {"family": "Jersey 10", "size": 76, "fit": ["14", 80], "chars": "$digits"},
+  "mm": {"family": "Jersey 10", "size": 76, "fit": ["32", 82], "chars": "$digits"},
+  "bold": {"family": "Silkscreen", "size": 8, "weight": 700, "chars": "$upper$digits."},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits-"},
+  "sec": {"family": "Jersey 10", "size": 36, "fit": ["47", 30], "chars": "$digits-"}
+ }}

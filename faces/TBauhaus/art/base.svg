@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges"><defs>
+<pattern id="d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" width="1" height="1" fill="#000"/><rect y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+</defs>
+<rect width="176" height="176" fill="#fff"/>
+<rect x="120" y="60" width="3" height="52" fill="#000"/>
+<rect x="0" y="140" width="104" height="3" fill="#000"/>
+<circle cx="72" cy="92" r="46" fill="url(#d50)" shape-rendering="auto"/>
+<rect x="44" y="146" width="16" height="16" fill="url(#d75)"/>
+</svg>

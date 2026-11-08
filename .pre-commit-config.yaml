@@ -1,0 +1,40 @@
+exclude: ^(design|refs|previews)/
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=600]
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: trailing-whitespace
+        exclude: \.md$
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.4
+    hooks:
+      - id: ruff-check
+      - id: ruff-format
+  - repo: local
+    hooks:
+      - id: actionlint
+        name: actionlint
+        entry: uvx --from actionlint-py actionlint
+        language: system
+        files: ^\.github/workflows/
+      - id: face-check
+        name: face checks
+        entry: python3 tools/check.py
+        language: system
+        pass_filenames: false
+        files: ^(faces|core|design|refs|previews)/
+      - id: site-lint
+        name: eslint and prettier for site/
+        entry: npm run lint
+        language: system
+        pass_filenames: false
+        files: ^(site/|eslint\.config\.js|package\.json)

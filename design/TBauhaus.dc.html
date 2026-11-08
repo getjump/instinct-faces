@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Bauhaus</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@700&amp;family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат Bauhaus: геометрическая композиция, растровые фактуры вместо красного, синего и жёлтого, круг с сектором минут и брусом часовой стрелки, квадрат секунд по орбите, цифры геометрическим гротеском">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="bh-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="bh-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="bh-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+<pattern id="bh-d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="1" width="1" height="1" fill="currentColor"></rect><rect y="1" width="1" height="1" fill="currentColor"></rect></pattern>
+<pattern id="bh-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect></pattern>
+<pattern id="bh-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect></pattern>
+</defs>
+<g clip-path="url(#bh-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<rect x="120" y="60" width="3" height="52" fill="currentColor"></rect>
+<rect x="0" y="140" width="104" height="3" fill="currentColor"></rect>
+<circle cx="72" cy="92" r="46" fill="url(#bh-d50)"></circle>
+<path d="{{wedge}}" fill="currentColor"></path>
+<path d="{{hour}}" fill="none" stroke="{{bg}}" stroke-width="9"></path>
+<path d="{{hour}}" fill="none" stroke="currentColor" stroke-width="6"></path>
+<circle cx="72" cy="92" r="5" fill="{{bg}}" stroke="currentColor" stroke-width="2"></circle>
+<polygon points="110,154 144,154 127,124" fill="{{bg}}"></polygon>
+<polygon points="110,154 144,154 127,124" fill="url(#bh-d12)" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"></polygon>
+<rect x="44" y="146" width="16" height="16" fill="url(#bh-d75)"></rect>
+<text x="66" y="158" fill="currentColor" font-family="Silkscreen, monospace" font-size="8">{{date}}</text>
+<g transform="{{secTf}}">
+<rect x="-5" y="-5" width="10" height="10" fill="currentColor"></rect>
+</g>
+<g fill="currentColor" font-family="Jost, 'Futura', sans-serif" font-weight="700" font-size="30">
+<text x="130" y="94">{{hh}}</text>
+<text x="130" y="118">{{mm}}</text>
+</g>
+<rect width="176" height="176" fill="url(#bh-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#bh-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<text x="144" y="38" text-anchor="middle" fill="currentColor" font-family="Jost, 'Futura', sans-serif" font-weight="700" font-size="24">{{ss}}</text>
+<path d="{{subArc}}" fill="url(#bh-d50)"></path>
+<path d="M130 58 A14 14 0 0 1 158 58" fill="none" stroke="currentColor" stroke-width="1"></path>
+<rect x="128" y="58" width="32" height="2" fill="currentColor"></rect>
+<rect x="113" y="1" width="62" height="62" fill="url(#bh-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ t: Date.now() }), 80);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const nowMs = Date.now();
+    const now = new Date(nowMs);
+    const f = (v) => v.toFixed(1);
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    const h = now.getHours();
+    const m = now.getMinutes();
+    const s = now.getSeconds();
+    const ms = now.getMilliseconds();
+    const rad = Math.PI / 180;
+    const cx = 72;
+    const cy = 92;
+    const P = (a, r) => [cx + r * Math.sin(a * rad), cy - r * Math.cos(a * rad)];
+    const ma = (m + s / 60) * 6;
+    const q1 = P(ma - 30, 46);
+    const q2 = P(ma + 30, 46);
+    const wedge = 'M72 92L' + f(q1[0]) + ' ' + f(q1[1]) + 'A46 46 0 0 1 ' + f(q2[0]) + ' ' + f(q2[1]) + 'Z';
+    const ha = ((h % 12) + m / 60) * 30;
+    const hb = P(ha, 34);
+    const sa = (s + ms / 1000) * 6;
+    const sp = P(sa, 50);
+    const frac = (s + ms / 1000) / 60;
+    const ea = 180 + 180 * frac;
+    const ex = 144 + 14 * Math.cos(ea * rad);
+    const ey = 58 + 14 * Math.sin(ea * rad);
+    const subArc = frac > 0.005 ? 'M144 58L130 58A14 14 0 0 1 ' + f(ex) + ' ' + f(ey) + 'Z' : 'M0 0';
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      wedge: wedge,
+      hour: 'M72 92L' + f(hb[0]) + ' ' + f(hb[1]),
+      secTf: 'translate(' + f(sp[0]) + ' ' + f(sp[1]) + ') rotate(' + f(sa) + ')',
+      hh: p2(h),
+      mm: p2(m),
+      ss: p2(s),
+      date: days[now.getDay()] + ' ' + p2(now.getDate()),
+      subArc: subArc
+    };
+  }
+}
+</script>
+</body>
+</html>

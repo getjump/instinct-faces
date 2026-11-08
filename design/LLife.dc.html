@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Игра «Жизнь»</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Игра Жизнь»: клеточный автомат Конвея идёт по всему экрану, время на чёрной полосе, номер поколения в окошке">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="lf-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="lf-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="lf-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+</defs>
+<g clip-path="url(#lf-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<path d="{{cells}}" fill="currentColor"></path>
+<rect x="0" y="62" width="176" height="48" fill="{{bg}}"></rect>
+<rect x="0" y="64" width="176" height="44" fill="currentColor"></rect>
+<text x="88" y="101" text-anchor="middle" fill="{{bg}}" font-family="'Jersey 10', monospace" font-size="46" textLength="108" lengthAdjust="spacingAndGlyphs">{{time}}</text>
+<rect x="62.5" y="150.5" width="51" height="11" fill="{{bg}}" stroke="currentColor" stroke-width="1"></rect>
+<text x="88" y="159" text-anchor="middle" fill="currentColor" font-family="Silkscreen, monospace" font-size="8">{{date}}</text>
+<rect width="176" height="176" fill="url(#lf-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#lf-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<g fill="currentColor" text-anchor="middle">
+<text x="144" y="20" font-family="Silkscreen, monospace" font-size="8">GEN</text>
+<text x="144" y="42" font-family="'Jersey 10', monospace" font-size="22">{{gen}}</text>
+<text x="144" y="55" font-family="Silkscreen, monospace" font-size="8">{{pop}}</text>
+</g>
+<rect x="113" y="1" width="62" height="62" fill="url(#lf-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.step(), 260);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  seed(p) {
+    const N = 44;
+    if (!this.grid) this.grid = new Uint8Array(N * N);
+    for (let i = 0; i < N * N; i++) {
+      if (Math.random() < p) this.grid[i] = 1;
+    }
+  }
+  glider(x, y) {
+    const N = 44;
+    const pts = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2]];
+    for (let k = 0; k < pts.length; k++) {
+      const gx = (x + pts[k][0]) % N;
+      const gy = (y + pts[k][1]) % N;
+      this.grid[gy * N + gx] = 1;
+    }
+  }
+  step() {
+    const N = 44;
+    if (!this.grid) this.seed(0.3);
+    const g = this.grid;
+    const n = new Uint8Array(N * N);
+    let pop = 0;
+    for (let y = 0; y < N; y++) {
+      const ym = ((y + N - 1) % N) * N;
+      const y0 = y * N;
+      const yp = ((y + 1) % N) * N;
+      for (let x = 0; x < N; x++) {
+        const xm = (x + N - 1) % N;
+        const xp = (x + 1) % N;
+        const c = g[ym + xm] + g[ym + x] + g[ym + xp] + g[y0 + xm] + g[y0 + xp] + g[yp + xm] + g[yp + x] + g[yp + xp];
+        const v = (c === 3 || (c === 2 && g[y0 + x] === 1)) ? 1 : 0;
+        n[y0 + x] = v;
+        pop += v;
+      }
+    }
+    this.grid = n;
+    this.gen = (this.gen || 0) + 1;
+    this.pop = pop;
+    if (this.gen % 25 === 0) this.glider(Math.floor(Math.random() * N), Math.floor(Math.random() * N));
+    const m = new Date().getMinutes();
+    if (pop < 90 || this.gen % 240 === 0 || m !== this.lastMin) {
+      this.lastMin = m;
+      this.seed(0.14);
+    }
+    this.setState({ gen: this.gen });
+  }
+  renderVals() {
+    const N = 44;
+    if (!this.grid) this.seed(0.3);
+    const g = this.grid;
+    let d = '';
+    for (let y = 0; y < N; y++) {
+      for (let x = 0; x < N; x++) {
+        if (g[y * N + x]) d += 'M' + (x * 4) + ' ' + (y * 4) + 'h3v3h-3z';
+      }
+    }
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const now = new Date();
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      cells: d || 'M0 0',
+      time: p2(now.getHours()) + ':' + p2(now.getMinutes()),
+      date: days[now.getDay()] + ' ' + p2(now.getDate()),
+      gen: String((this.gen || 0) % 100000),
+      pop: 'P ' + (this.pop || 0)
+    };
+  }
+}
+</script>
+</body>
+</html>

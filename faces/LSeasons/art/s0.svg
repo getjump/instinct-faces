@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176">
+<defs>
+<pattern id="d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" width="1" height="1" fill="#000"/><rect y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/></pattern>
+<pattern id="d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+</defs>
+<rect width="176" height="176" fill="#fff"/>
+<rect width="176" height="176" fill="url(#d50)" shape-rendering="crispEdges"/>
+<path d="M-2 140 Q88 112 178 140 V178 H-2 Z" fill="#fff"/>
+<path d="M-2 140 Q88 112 178 140 V178 H-2 Z" fill="none" stroke="#000" stroke-width="1"/>
+<polygon points="66,130 74,130 72,98 68,98" fill="#000"/>
+<path d="M70 104 L54 88 M70 100 L86 82 M70 98 L70 62 M70 90 L58 72 M70 88 L82 70 M54 88 L48 80 M86 82 L94 76" fill="none" stroke="#000" stroke-width="2"/>
+</svg>

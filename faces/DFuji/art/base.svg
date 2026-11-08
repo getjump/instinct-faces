@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+
+<defs>
+<pattern id="fj-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="1" y="1" width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="fj-d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="fj-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="2" y="2" width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="fj-hl" width="1" height="3" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect></pattern>
+</defs>
+<g>
+<rect width="176" height="176" fill="#fff"></rect>
+<rect x="0" y="0" width="176" height="14" fill="url(#fj-d50)"></rect>
+<rect x="0" y="14" width="176" height="16" fill="url(#fj-d25)"></rect>
+<rect x="0" y="30" width="176" height="14" fill="url(#fj-d12)"></rect>
+<circle cx="40" cy="52" r="22" fill="#fff"></circle>
+<circle cx="40" cy="52" r="22" fill="url(#fj-d50)"></circle>
+<path d="M-4 152 Q50 112 70 72 L78 66 L86 66 L94 72 Q114 112 168 152 Z" fill="#000"></path>
+<path d="M70 72 L78 66 L86 66 L94 72 Q97 80 101 88 L96 85 L92 91 L87 85 L82 92 L77 85 L72 91 L68 85 L63 88 Q67 80 70 72 Z" fill="#fff"></path>
+<g fill="#fff">
+<rect x="66" y="93" width="1" height="7"></rect>
+<rect x="82" y="95" width="1" height="9"></rect>
+<rect x="98" y="93" width="1" height="6"></rect>
+<rect x="74" y="96" width="1" height="4"></rect>
+<rect x="90" y="97" width="1" height="4"></rect>
+</g>
+
+<g fill="#fff" stroke="#000" stroke-width="1">
+<rect x="26.5" y="104.5" width="128" height="6" rx="3"></rect>
+<rect x="-6.5" y="120.5" width="72" height="5" rx="2.5"></rect>
+<rect x="104.5" y="128.5" width="80" height="5" rx="2.5"></rect>
+</g>
+<rect x="0" y="140" width="176" height="16" fill="#fff"></rect>
+<rect x="0" y="140" width="176" height="16" fill="url(#fj-hl)"></rect>
+<polygon points="40,140 124,140 82,156" fill="url(#fj-d50)"></polygon>
+<rect x="0" y="156" width="176" height="20" fill="#000"></rect>
+
+</g>
+
+<g>
+<rect x="113" y="1" width="62" height="62" fill="#fff"></rect>
+<g fill="#000" text-anchor="middle">
+
+
+</g>
+<polygon points="136,56 144,48 152,56" fill="#000"></polygon>
+<polygon points="144,48 141,51 147,51" fill="#fff"></polygon>
+</g>
+
+</svg>

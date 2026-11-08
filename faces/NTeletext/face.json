@@ -1,0 +1,7 @@
+{"title": "N1 Teletext",
+ "permissions": ["SensorHistory"],
+ "fonts": {
+  "vt": {"family": "VT323", "size": 13, "chars": "$upper$digits :/%[]#-.+"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "WXBODYSTEPAGETX"},
+  "pg": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ }}

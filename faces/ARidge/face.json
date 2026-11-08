@@ -1,0 +1,7 @@
+{"title": "ARidge Ridgeline",
+ "fake": "ridge shapes are generated, not measured; HR number is real",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 22, "fit": ["14:32", 44], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "HRBPM"},
+  "hr": {"family": "Jersey 10", "size": 26, "chars": "$digits-"}
+ }}

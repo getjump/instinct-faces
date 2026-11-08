@@ -1,0 +1,8 @@
+{"title": "J1 Poster",
+ "fonts": {
+  "s8": {"family": "Dela Gothic One", "size": 8, "chars": "TIME 時刻0123456789. 日月火水木金土ビョウ"},
+  "k14": {"family": "Dela Gothic One", "size": 14, "chars": "時分"},
+  "k12": {"family": "Dela Gothic One", "size": 12, "chars": "タシケント"},
+  "big": {"family": "Dela Gothic One", "size": 50, "fit": ["14", 64], "chars": "$digits"},
+  "ss": {"family": "Dela Gothic One", "size": 22, "chars": "$digits-"}
+ }}

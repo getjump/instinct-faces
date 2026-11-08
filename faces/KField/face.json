@@ -1,0 +1,5 @@
+{"title": "K1 Field",
+ "fonts": {
+  "dd": {"family": "Jersey 10", "size": 18, "chars": "$digits"},
+  "dow": {"family": "Silkscreen", "size": 8, "chars": "$upper"}
+ }}

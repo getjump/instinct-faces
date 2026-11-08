@@ -1,0 +1,6 @@
+{"title": "DRain",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 42, "fit": ["09:15", 68], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits %-"},
+  "tmp": {"family": "Jersey 10", "size": 26, "fit": ["12", 22], "chars": "$digits-"}
+ }}

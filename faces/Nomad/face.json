@@ -1,0 +1,6 @@
+{"title": "Nomad",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 50, "fit": ["14:32", 106], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits +-:"},
+  "sub": {"family": "Jersey 10", "size": 22, "fit": ["18:32", 40], "chars": "$time"}
+ }}

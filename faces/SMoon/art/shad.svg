@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" viewBox="24 44 116 116" shape-rendering="crispEdges">
+<defs>
+<pattern id="mn-b12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#fff"/><rect x="2" y="2" width="1" height="1" fill="#fff"/></pattern>
+</defs>
+<rect x="24" y="44" width="116" height="116" fill="#000"/>
+<rect x="24" y="44" width="116" height="116" fill="url(#mn-b12)"/>
+</svg>

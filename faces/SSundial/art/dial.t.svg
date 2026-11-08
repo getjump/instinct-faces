@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="58" viewBox="28 52 112 58" shape-rendering="crispEdges">
+<defs>
+<pattern id="sd-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+</defs>
+<path d="M32 108 A52 52 0 0 1 136 108 Z" fill="url(#sd-d12)"/>
+<path d="M32 108 A52 52 0 0 1 136 108" fill="none" stroke="#000" stroke-width="1"/>
+<path d="M28 108 H140" fill="none" stroke="#000" stroke-width="1"/>
+<g fill="#000" font-family="Silkscreen, monospace" font-size="8" text-anchor="middle">
+<text x="50" y="104">VI</text>
+<text x="65" y="83">IX</text>
+<text x="84" y="77">XII</text>
+<text x="103" y="83">III</text>
+<text x="118" y="104">VI</text>
+</g>
+</svg>

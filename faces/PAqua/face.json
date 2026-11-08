@@ -1,0 +1,7 @@
+{"title": "PAqua Aquarium",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "time": {"family": "Jersey 10", "size": 30, "fit": ["14:32", 56], "chars": "$time"},
+  "num": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ },
+ "fake": "fish, bubbles and water are decorative; sub-window counts real goal days instead of the design's FISH 5"}

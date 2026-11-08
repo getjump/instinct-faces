@@ -1,0 +1,23 @@
+# Build outputs
+build/
+dist/
+_site/
+.work/
+picked/
+*.prg
+*.prg.debug.xml
+*.iq
+
+# Signing keys: never commit
+.keys/
+*.der
+*.pem
+
+# Tooling
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.venv/
+node_modules/
+.DS_Store

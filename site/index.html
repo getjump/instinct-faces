@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instinct Faces</title>
+    <meta
+      name="description"
+      content="57 one-bit watch faces for the Garmin Instinct 3 Solar, running live in the browser next to frames captured from the real watch build."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolygon points='5,1 11,1 15,5 15,11 11,15 5,15 1,11 1,5' fill='%2356603f'/%3E%3Ccircle cx='8' cy='8' r='5' fill='%23c6c9bc'/%3E%3Crect x='5' y='7' width='6' height='2' fill='%23161713'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Space+Grotesk:wght@400;500;600&family=VT323&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="brand">
+        <p class="kicker">Garmin Instinct 3 Solar 45mm - 176 x 176 - 1 bit</p>
+        <h1>Instinct Faces</h1>
+        <p class="lede">
+          <span id="count">57</span> watch faces drawn for a monochrome sports watch. Every design below runs live in
+          your browser; switch to <em>Watch build</em> to see what the compiled face actually draws on the device.
+        </p>
+      </div>
+      <nav class="links" aria-label="Project">
+        <a id="link-repo" href="#">Source</a>
+        <a id="link-releases" href="#">Download .prg</a>
+        <a id="link-install" href="#">Install guide</a>
+      </nav>
+    </header>
+
+    <form class="toolbar" id="toolbar" aria-label="Preview controls">
+      <fieldset class="group" aria-label="View">
+        <legend>View</legend>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="view" value="live" checked /><span>Live design</span></label>
+          <label><input type="radio" name="view" value="build" /><span>Watch build</span></label>
+        </div>
+        <div class="seg" role="radiogroup" data-only="build">
+          <label><input type="radio" name="frame" value="awake" checked /><span>Awake</span></label>
+          <label><input type="radio" name="frame" value="asleep" /><span>Asleep</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="group" aria-label="Screen">
+        <legend>Screen</legend>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="mode" value="light" checked /><span>Light</span></label>
+          <label><input type="radio" name="mode" value="dark" /><span>Dark</span></label>
+        </div>
+        <label class="toggle" data-only="live"
+          ><input type="checkbox" name="demo" checked /><span>Demo motion</span></label
+        >
+      </fieldset>
+
+      <fieldset class="group" aria-label="Case">
+        <legend>Case</legend>
+        <div class="swatches" id="swatches" role="radiogroup"></div>
+      </fieldset>
+
+      <fieldset class="group clock" aria-label="Clock" data-only="live">
+        <legend>Clock</legend>
+        <output id="clock-readout" class="readout">--:--:--</output>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="speed" value="1" checked /><span>1x</span></label>
+          <label><input type="radio" name="speed" value="60" /><span>60x</span></label>
+          <label><input type="radio" name="speed" value="600" /><span>600x</span></label>
+          <label><input type="radio" name="speed" value="0" /><span>Pause</span></label>
+        </div>
+        <input type="time" id="clock-set" aria-label="Set time" />
+        <button type="button" id="clock-now" class="ghost">Now</button>
+      </fieldset>
+
+      <fieldset class="group find" aria-label="Filter">
+        <legend>Find</legend>
+        <input type="search" id="search" placeholder="Name or title" autocomplete="off" />
+      </fieldset>
+    </form>
+
+    <nav class="chips" id="chips" aria-label="Sections"></nav>
+
+    <main id="gallery" aria-live="polite"></main>
+
+    <footer class="foot">
+      <p>
+        Designs are interactive HTML mockups; faces are hand-ported to Monkey C and built with the Connect IQ SDK. Live
+        view uses your clock and fake sensor data, the watch build shows frames captured in the Connect IQ simulator.
+        Not affiliated with Garmin.
+      </p>
+      <p><a id="link-license" href="#">MIT license</a> - fonts under the SIL Open Font License.</p>
+    </footer>
+
+    <dialog id="detail" aria-labelledby="detail-title">
+      <div class="detail">
+        <div class="detail-stage" id="detail-stage"></div>
+        <aside class="detail-side">
+          <header>
+            <p class="kicker" id="detail-section"></p>
+            <h2 id="detail-title"></h2>
+            <p class="tags" id="detail-tags"></p>
+          </header>
+          <p class="note" id="detail-note" hidden></p>
+          <form id="detail-props" class="props" aria-label="Design properties"></form>
+          <figure class="frames">
+            <div>
+              <img id="detail-ref" alt="" width="176" height="176" />
+              <figcaption>Design, 1 bit</figcaption>
+            </div>
+            <div>
+              <img id="detail-awake" alt="" width="176" height="176" />
+              <figcaption>Watch, awake</figcaption>
+            </div>
+            <div>
+              <img id="detail-asleep" alt="" width="176" height="176" />
+              <figcaption>Watch, asleep</figcaption>
+            </div>
+          </figure>
+          <p class="actions" id="detail-actions"></p>
+        </aside>
+        <div class="detail-nav">
+          <button type="button" class="ghost" id="detail-prev" aria-label="Previous face">&larr;</button>
+          <button type="button" class="ghost" id="detail-next" aria-label="Next face">&rarr;</button>
+          <button type="button" class="ghost" id="detail-close" aria-label="Close">Close</button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

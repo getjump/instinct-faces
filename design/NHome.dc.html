@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Стрелка домой</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Стрелка домой»: роза ветров с севером вверху, стрелка плавно поворачивается на азимут выбранного места, расстояние по дуге большого круга в километрах, точка отсчёта в окошке">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="hm-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="hm-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="hm-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+<pattern id="hm-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="2" y="2" width="1" height="1" fill="currentColor"></rect></pattern>
+</defs>
+<g clip-path="url(#hm-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<text x="30" y="42" fill="currentColor" font-family="'Jersey 10', monospace" font-size="22" textLength="42" lengthAdjust="spacingAndGlyphs">{{time}}</text>
+<circle cx="80" cy="100" r="40" fill="url(#hm-d12)" stroke="currentColor" stroke-width="1.5"></circle>
+<path d="{{ticks}}" fill="none" stroke="currentColor" stroke-width="1"></path>
+<text x="80" y="57" text-anchor="middle" fill="currentColor" font-family="Silkscreen, monospace" font-size="8">N</text>
+<g transform="{{arrowTf}}">
+<polygon points="80,66 73,108 80,101 87,108" fill="currentColor" stroke="{{bg}}" stroke-width="1"></polygon>
+</g>
+<circle cx="80" cy="100" r="3" fill="{{bg}}" stroke="currentColor" stroke-width="1"></circle>
+<g fill="currentColor">
+<text x="126" y="104" font-family="'Jersey 10', monospace" font-size="24">{{dist}}</text>
+<text x="126" y="116" font-family="Silkscreen, monospace" font-size="8">KM</text>
+</g>
+<g fill="currentColor" font-family="Silkscreen, monospace" font-size="8" text-anchor="middle">
+<text x="88" y="156">{{place}}</text>
+<text x="88" y="167">{{brg}}</text>
+</g>
+<rect width="176" height="176" fill="url(#hm-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#hm-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<g fill="currentColor" text-anchor="middle">
+<text x="144" y="20" font-family="Silkscreen, monospace" font-size="8">FROM</text>
+<text x="144" y="44" font-family="'Jersey 10', monospace" font-size="24">TAS</text>
+<text x="144" y="56" font-family="Silkscreen, monospace" font-size="8">41.3N</text>
+</g>
+<rect x="113" y="1" width="62" height="62" fill="url(#hm-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ t: Date.now() }), 50);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  geo(lat1, lon1, lat2, lon2) {
+    const r = Math.PI / 180;
+    const p1 = lat1 * r;
+    const p2 = lat2 * r;
+    const dl = (lon2 - lon1) * r;
+    const y = Math.sin(dl) * Math.cos(p2);
+    const x = Math.cos(p1) * Math.sin(p2) - Math.sin(p1) * Math.cos(p2) * Math.cos(dl);
+    const brg = ((Math.atan2(y, x) / r) + 360) % 360;
+    const a = Math.pow(Math.sin((p2 - p1) / 2), 2) + Math.cos(p1) * Math.cos(p2) * Math.pow(Math.sin(dl / 2), 2);
+    const dist = 2 * 6371 * Math.asin(Math.sqrt(a));
+    return [brg, dist];
+  }
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const nowMs = Date.now();
+    const now = new Date(nowMs);
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    const places = [
+      ['TBILISI', 41.72, 44.79],
+      ['BELGRADE', 44.79, 20.45],
+      ['TOKYO', 35.68, 139.69],
+      ['SAKHALIN', 46.96, 142.74]
+    ];
+    const idx = Math.floor(nowMs / 5000) % places.length;
+    const pl = places[idx];
+    const g = this.geo(41.31, 69.28, pl[1], pl[2]);
+    if (this.idx !== idx) {
+      this.fromA = this.curA === undefined ? g[0] : this.curA;
+      this.fromD = this.curD === undefined ? g[1] : this.curD;
+      this.idx = idx;
+      this.changeAt = nowMs;
+    }
+    const p = Math.min(1, (nowMs - this.changeAt) / 1100);
+    const e = 1 - Math.pow(1 - p, 3);
+    let delta = ((g[0] - this.fromA + 540) % 360) - 180;
+    const a = this.fromA + delta * e;
+    const d = this.fromD + (g[1] - this.fromD) * e;
+    this.curA = a;
+    this.curD = d;
+    let ticks = '';
+    for (let k = 0; k < 12; k++) {
+      const ang = (k * 30 * Math.PI) / 180;
+      const r1 = k % 3 === 0 ? 33 : 36;
+      ticks += 'M' + (80 + r1 * Math.sin(ang)).toFixed(1) + ' ' + (100 - r1 * Math.cos(ang)).toFixed(1) + 'L' + (80 + 40 * Math.sin(ang)).toFixed(1) + ' ' + (100 - 40 * Math.cos(ang)).toFixed(1);
+    }
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      time: p2(now.getHours()) + ':' + p2(now.getMinutes()),
+      ticks: ticks,
+      arrowTf: 'rotate(' + a.toFixed(1) + ' 80 100)',
+      dist: String(Math.round(d)),
+      place: pl[0],
+      brg: 'BRG ' + Math.round(((g[0] % 360) + 360) % 360)
+    };
+  }
+}
+</script>
+</body>
+</html>

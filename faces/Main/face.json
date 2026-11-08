@@ -1,0 +1,7 @@
+{"title": "01 Terminal",
+ "fonts": {
+  "big": {"family": "VT323", "size": 50, "sx": 1.22, "chars": "$time"},
+  "txt": {"family": "VT323", "size": 13, "chars": "$lower$digits~$|d "},
+  "lab": {"family": "VT323", "size": 12, "chars": "sec"},
+  "num": {"family": "VT323", "size": 34, "chars": "$digits-"}
+ }}

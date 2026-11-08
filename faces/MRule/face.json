@@ -1,0 +1,7 @@
+{"title": "MRule Rule 30",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 32, "fit": ["14:32", 72], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "rule": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ },
+ "fake": "rule 30 automaton, generation counter and seed are simulated"}

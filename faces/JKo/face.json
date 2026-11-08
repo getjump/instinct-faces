@@ -1,0 +1,43 @@
+{
+ "title": "J2 Ko",
+ "fonts": {
+  "t26": {
+   "family": "Shippori Mincho",
+   "size": 26,
+   "weight": 800,
+   "chars": "$digits:"
+  },
+  "k24": {
+   "family": "Shippori Mincho",
+   "size": 24,
+   "weight": 800,
+   "chars": "霜始降霎時施楓蔦黄山茶開地凍金盞香虹蔵不見朔風払葉橘閉塞成冬熊蟄穴鱖魚群小寒大立春雨水啓分清明穀夏満芒種至暑秋処白露雪"
+  },
+  "k11": {
+   "family": "Shippori Mincho",
+   "size": 11,
+   "weight": 800,
+   "chars": "零一二三四五六七八九十月日小寒大立春雨水啓蟄分清明穀夏満芒種至暑秋処白露霜降冬雪"
+  },
+  "k9": {
+   "family": "Shippori Mincho",
+   "size": 9,
+   "weight": 800,
+   "chars": "Выпадетрвй инмосЖлюкёщЗцячзуьБгхРСХ,МбЛ七十二候小寒大立春雨水啓蟄分清明穀夏満芒種至暑秋処白露霜降冬雪",
+   "t": 0.3
+  },
+  "k8": {
+   "family": "Shippori Mincho",
+   "size": 8,
+   "weight": 800,
+   "chars": "しもはじめてふるこさときどみつたばむひらくちおんせかにれえずぜのをうなそゆまあけが",
+   "t": 0.35
+  },
+  "k18": {
+   "family": "Shippori Mincho",
+   "size": 18,
+   "weight": 800,
+   "chars": "初次末候"
+  }
+ }
+}

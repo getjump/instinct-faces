@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+
+<defs>
+<pattern id="rn-d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="1" width="1" height="1" fill="#000"></rect><rect y="1" width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="rn-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="2" y="2" width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="rn-rain" width="8" height="8" patternUnits="userSpaceOnUse"><rect x="6" width="1" height="1" fill="#000"></rect><rect x="5" y="1" width="1" height="1" fill="#000"></rect><rect x="4" y="2" width="1" height="1" fill="#000"></rect><rect x="2" y="4" width="1" height="1" fill="#000"></rect><rect x="1" y="5" width="1" height="1" fill="#000"></rect><rect y="6" width="1" height="1" fill="#000"></rect></pattern>
+</defs>
+<g>
+<rect width="176" height="176" fill="#fff"></rect>
+<rect x="0" y="0" width="176" height="140" fill="url(#rn-d12)"></rect>
+<rect x="0" y="30" width="176" height="110" fill="url(#rn-rain)"></rect>
+<g fill="#fff">
+<circle cx="40" cy="52" r="28"></circle>
+<circle cx="70" cy="46" r="30"></circle>
+<circle cx="100" cy="52" r="24"></circle>
+<circle cx="56" cy="70" r="22"></circle>
+<circle cx="88" cy="70" r="22"></circle>
+<circle cx="36" cy="68" r="20"></circle>
+<circle cx="104" cy="68" r="20"></circle>
+</g>
+<g fill="url(#rn-d75)">
+<circle cx="40" cy="52" r="28"></circle>
+<circle cx="70" cy="46" r="30"></circle>
+<circle cx="100" cy="52" r="24"></circle>
+<circle cx="56" cy="70" r="22"></circle>
+<circle cx="88" cy="70" r="22"></circle>
+<circle cx="36" cy="68" r="20"></circle>
+<circle cx="104" cy="68" r="20"></circle>
+</g>
+<g fill="#000">
+<circle cx="40" cy="52" r="24"></circle>
+<circle cx="70" cy="46" r="26"></circle>
+<circle cx="100" cy="52" r="20"></circle>
+<circle cx="56" cy="70" r="18"></circle>
+<circle cx="88" cy="70" r="18"></circle>
+<circle cx="36" cy="68" r="16"></circle>
+<circle cx="104" cy="68" r="16"></circle>
+</g>
+
+<polygon points="117,123 139,123 137,140 119,140" fill="#fff"></polygon>
+<polygon points="117,123 139,123 137,140 119,140" fill="url(#rn-d12)"></polygon>
+<g fill="#000">
+<path d="M117 123 A11 8 0 0 1 139 123 Z"></path>
+<rect x="127" y="113" width="1" height="2"></rect>
+<rect x="128" y="123" width="1" height="7"></rect>
+<circle cx="126" cy="127" r="2.5"></circle>
+<polygon points="122,130 130,130 132,140 120,140"></polygon>
+</g>
+<rect x="0" y="140" width="176" height="36" fill="#000"></rect>
+<g fill="none" stroke="#fff" stroke-width="1">
+<ellipse cx="60" cy="154" rx="10" ry="3"></ellipse>
+<ellipse cx="60" cy="154" rx="4" ry="1.5"></ellipse>
+<ellipse cx="124" cy="156" rx="10" ry="3"></ellipse>
+<ellipse cx="124" cy="156" rx="4" ry="1.5"></ellipse>
+<ellipse cx="88" cy="148" rx="6" ry="2"></ellipse>
+</g>
+
+</g>
+
+<g>
+<rect x="113" y="1" width="62" height="62" fill="#fff"></rect>
+
+<circle cx="155" cy="21" r="2" fill="none" stroke="#000" stroke-width="1"></circle>
+<g fill="#000">
+<rect x="136" y="46" width="1" height="1"></rect>
+<rect x="135" y="47" width="3" height="2"></rect>
+<rect x="134" y="49" width="5" height="3"></rect>
+<rect x="135" y="52" width="3" height="1"></rect>
+</g>
+
+</g>
+
+</svg>

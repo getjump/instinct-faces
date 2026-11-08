@@ -1,0 +1,6 @@
+{"title": "Ascent",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 46, "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits -"},
+  "hr": {"family": "Jersey 10", "size": 32, "chars": "$digits-"}
+ }}

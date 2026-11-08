@@ -1,0 +1,8 @@
+{"title": "GTrace Traceroute",
+ "fake": "traceroute hops, per-hop RTT and the RTT/MS readout are simulated, the watch has no network probe",
+ "fonts": {
+  "txt": {"family": "VT323", "size": 12, "chars": "$lower$upper$digits$.*:- "},
+  "time": {"family": "VT323", "size": 46, "fit": ["14:32", 92], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "RTMS"},
+  "png": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ }}

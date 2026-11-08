@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="32" viewBox="0 144 176 32">
+<defs><pattern id="d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern><pattern id="d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern></defs>
+<rect y="144" width="176" height="32" fill="#fff"/>
+<path d="M0 150 Q20 144 40 150 T80 150 T120 150 T160 150 T200 150 V176 H0 Z" fill="#fff"/>
+<path d="M0 150 Q20 144 40 150 T80 150 T120 150 T160 150 T200 150 V176 H0 Z" fill="url(#d50)" shape-rendering="crispEdges"/>
+<path d="M0 150 Q20 144 40 150 T80 150 T120 150 T160 150 T200 150 V176 H0 Z" fill="none" stroke="#000" stroke-width="1"/>
+</svg>

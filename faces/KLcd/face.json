@@ -1,0 +1,4 @@
+{"title": "K6 LCD",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits-"}
+ }}

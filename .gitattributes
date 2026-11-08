@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.prg binary
+
+design/** linguist-documentation
+refs/** linguist-generated
+previews/** linguist-generated
+package-lock.json linguist-generated

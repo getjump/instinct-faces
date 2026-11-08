@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="70" viewBox="20 70 140 70" shape-rendering="crispEdges">
+<defs><pattern id="so-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern></defs>
+<rect x="20" y="70" width="140" height="70" fill="url(#so-d50)"/>
+</svg>

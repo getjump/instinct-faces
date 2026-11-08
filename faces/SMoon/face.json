@@ -1,0 +1,6 @@
+{"title": "SMoon Moon Phase",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 26, "fit": ["14:32", 48], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits% "},
+  "ill": {"family": "Jersey 10", "size": 24, "chars": "$digits%"}
+ }}

@@ -1,0 +1,6 @@
+{"title": "LMapWalk Map Walk",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits /"},
+  "time": {"family": "Jersey 10", "size": 32, "fit": ["14:32", 64], "chars": "$time"},
+  "map": {"family": "VT323", "size": 10, "fit": ["########################", 124], "chars": "#.~T+>:@"}
+ }}

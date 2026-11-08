@@ -1,0 +1,6 @@
+{"title": "DFuji",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 30, "fit": ["07:40", 50], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "sub": {"family": "Jersey 10", "size": 22, "fit": ["11:40", 40], "chars": "$time"}
+ }}

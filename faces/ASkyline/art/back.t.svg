@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+<defs>
+<pattern id="sk-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+</defs>
+<rect x="0" y="140" width="176" height="36" fill="url(#sk-d12)"/>
+<path d="M18 86H158" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="2 2"/>
+<text x="20" y="83" fill="#000" font-family="Silkscreen, monospace" font-size="8">10K</text>
+<rect x="0" y="140" width="176" height="1" fill="#000"/>
+<rect x="140" y="153" width="12" height="1" fill="#000"/>
+</svg>

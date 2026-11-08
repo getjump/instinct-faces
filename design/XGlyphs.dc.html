@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Свои sci-fi-глифы</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&amp;family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Свои sci-fi-глифы»: время записано придуманными цифрами-созвездиями на решётке три на три точки, при смене цифры она прочерчивается заново, под ними расшифровка и дата мелкими глифами, по цифрам ходит линия сканера; секунды глифами в окошке">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="gx-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="gx-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="gx-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+<pattern id="gx-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect><rect x="1" y="1" width="1" height="1" fill="currentColor"></rect></pattern>
+</defs>
+<g clip-path="url(#gx-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<text x="28" y="50" fill="currentColor" font-family="Orbitron, sans-serif" font-weight="700" font-size="7" letter-spacing="1">LATTICE·T</text>
+<path d="M28 55.5H104" fill="none" stroke="currentColor" stroke-width="1"></path>
+<path d="{{latBig}}" fill="currentColor" opacity="0.45"></path>
+<path d="{{bigP}}" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"></path>
+<path d="{{nodes}}" fill="currentColor"></path>
+<path d="{{heads}}" fill="none" stroke="currentColor" stroke-width="1"></path>
+<path d="M88 76l3 3-3 3-3-3zM88 88l3 3-3 3-3-3z" fill="currentColor"></path>
+<rect x="10" y="{{scanY}}" width="156" height="3" fill="url(#gx-d50)"></rect>
+<text x="88" y="118" text-anchor="middle" fill="currentColor" font-family="Orbitron, sans-serif" font-weight="700" font-size="9" letter-spacing="2">{{decoded}}</text>
+<path d="{{latSmall}}" fill="currentColor" opacity="0.45"></path>
+<path d="{{smallP}}" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"></path>
+<rect x="87.2" y="139" width="1.6" height="1.6" fill="currentColor"></rect>
+<text x="88" y="156" text-anchor="middle" fill="currentColor" font-family="Orbitron, sans-serif" font-weight="500" font-size="7" letter-spacing="1">{{dateTxt}}</text>
+<rect width="176" height="176" fill="url(#gx-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#gx-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<path d="{{latSec}}" fill="currentColor" opacity="0.45"></path>
+<path d="{{secP}}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"></path>
+<g fill="currentColor" text-anchor="middle" font-family="Orbitron, sans-serif">
+<text x="144" y="44" font-weight="700" font-size="10">{{ss}}</text>
+<text x="144" y="55" font-weight="500" font-size="6" letter-spacing="1">SEC</text>
+</g>
+<rect x="113" y="1" width="62" height="62" fill="url(#gx-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"demo":{"editor":"boolean","default":true,"section":"Анимация"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ t: Date.now() }), 50);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  glyph(d, x, y, s, p) {
+    const f = (v) => v.toFixed(1);
+    const G = [
+      [1, 5, 7, 3, 1],
+      [0, 1, 7],
+      [0, 1, 5, 3, 7, 8],
+      [0, 2, 4, 8, 6],
+      [0, 4, 2, 8],
+      [2, 0, 3, 4, 8, 6],
+      [1, 3, 6, 8, 5, 3],
+      [0, 2, 7],
+      [0, 2, 6, 8, 0],
+      [8, 2, 0, 3, 5]
+    ];
+    const pts = G[d].map((i) => [x + (i % 3) * s, y + Math.floor(i / 3) * s]);
+    const lens = [];
+    let total = 0;
+    for (let i = 1; i < pts.length; i++) {
+      const l = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+      lens.push(l);
+      total += l;
+    }
+    let rem = total * p;
+    let path = 'M' + f(pts[0][0]) + ' ' + f(pts[0][1]);
+    let head = pts[0];
+    for (let i = 1; i < pts.length && rem > 0; i++) {
+      const l = lens[i - 1];
+      const k = Math.min(1, rem / l);
+      const hx = pts[i - 1][0] + (pts[i][0] - pts[i - 1][0]) * k;
+      const hy = pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * k;
+      path += 'L' + f(hx) + ' ' + f(hy);
+      head = [hx, hy];
+      rem -= l;
+    }
+    let lat = '';
+    const r = s > 10 ? 0.8 : 0.5;
+    for (let i = 0; i < 9; i++) {
+      const lx = x + (i % 3) * s;
+      const ly = y + Math.floor(i / 3) * s;
+      lat += 'M' + f(lx - r) + ' ' + f(ly - r) + 'h' + (2 * r) + 'v' + (2 * r) + 'h' + (-2 * r) + 'z';
+    }
+    return { path: path, head: head, start: pts[0], lat: lat };
+  }
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const demo = this.props.demo ?? true;
+    const nowMs = Date.now();
+    const now = new Date(nowMs);
+    const f = (v) => v.toFixed(1);
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    const hour = now.getHours();
+    const minute = demo ? Math.floor(nowMs / 5000) % 60 : now.getMinutes();
+    const sec = now.getSeconds();
+    const digits = [Math.floor(hour / 10), hour % 10, Math.floor(minute / 10), minute % 10];
+    const sdig = [Math.floor(sec / 10), sec % 10];
+    if (!this.prev) {
+      this.prev = [-1, -1, -1, -1];
+      this.at = [0, 0, 0, 0];
+      this.sprev = [-1, -1];
+      this.sat = [0, 0];
+    }
+    for (let i = 0; i < 4; i++) {
+      if (this.prev[i] !== digits[i]) {
+        this.prev[i] = digits[i];
+        this.at[i] = nowMs + i * 90;
+      }
+    }
+    for (let i = 0; i < 2; i++) {
+      if (this.sprev[i] !== sdig[i]) {
+        this.sprev[i] = sdig[i];
+        this.sat[i] = nowMs;
+      }
+    }
+    const xs = [15, 51, 97, 133];
+    let bigP = '';
+    let latBig = '';
+    let nodes = '';
+    let heads = '';
+    let decoded = '';
+    for (let i = 0; i < 4; i++) {
+      const p = Math.max(0, Math.min(1, (nowMs - this.at[i]) / 650));
+      const g = this.glyph(digits[i], xs[i], 70, 14, p);
+      bigP += g.path;
+      latBig += g.lat;
+      nodes += 'M' + f(g.start[0] - 2.2) + ' ' + f(g.start[1] - 2.2) + 'h4.4v4.4h-4.4z';
+      if (p < 1) {
+        heads += 'M' + f(g.head[0] - 3.5) + ' ' + f(g.head[1]) + 'a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0Z';
+        decoded += String(Math.floor(nowMs / 70 + i * 7) % 10);
+      } else {
+        decoded += String(digits[i]);
+      }
+      if (i === 1) decoded += ':';
+    }
+    const dd = now.getDate();
+    const mo = now.getMonth() + 1;
+    const ddig = [Math.floor(dd / 10), dd % 10, Math.floor(mo / 10), mo % 10];
+    const dxs = [55, 71, 93, 109];
+    let smallP = '';
+    let latSmall = '';
+    for (let i = 0; i < 4; i++) {
+      const g = this.glyph(ddig[i], dxs[i], 128, 6, 1);
+      smallP += g.path;
+      latSmall += g.lat;
+    }
+    const sxs = [128, 146];
+    let secP = '';
+    let latSec = '';
+    for (let i = 0; i < 2; i++) {
+      const p = Math.max(0, Math.min(1, (nowMs - this.sat[i]) / 300));
+      const g = this.glyph(sdig[i], sxs[i], 13, 7, p);
+      secP += g.path;
+      latSec += g.lat;
+    }
+    const dow = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      bigP: bigP,
+      latBig: latBig,
+      nodes: nodes,
+      heads: heads || 'M0 0',
+      scanY: f(62 + ((nowMs % 2600) / 2600) * 46),
+      decoded: decoded,
+      smallP: smallP,
+      latSmall: latSmall,
+      dateTxt: p2(dd) + '·' + p2(mo) + ' ' + dow[now.getDay()],
+      secP: secP,
+      latSec: latSec,
+      ss: p2(sec)
+    };
+  }
+}
+</script>
+</body>
+</html>

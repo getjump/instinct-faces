@@ -1,0 +1,7 @@
+{"title": "N5 World",
+ "fake": "fallback observer position is the constant Tashkent 41.31N 69.28E when there is no GPS fix; the map is a baked 44x22 land mask",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits :"},
+  "time": {"family": "Jersey 10", "size": 28, "fit": ["14:32", 56], "chars": "$time"},
+  "alt": {"family": "Jersey 10", "size": 24, "chars": "$digits-°"}
+ }}

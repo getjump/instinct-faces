@@ -1,0 +1,17 @@
+{
+  "name": "instinct-faces-site",
+  "private": true,
+  "description": "Lint and format tooling for the gallery in site/",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint site && prettier --check site",
+    "format": "prettier --write site"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "eslint": "9.39.5",
+    "globals": "17.14.0",
+    "prettier": "3.9.10"
+  }
+}

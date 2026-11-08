@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Ридж-лайн пульса</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Ридж-лайн пульса»: двенадцать последних часов пульса стопкой волн, нижняя волна текущего часа рисуется в реальном времени, пульс в окошке">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="rg-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="rg-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="rg-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+</defs>
+<g clip-path="url(#rg-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<g stroke="currentColor" stroke-width="1" stroke-linejoin="round">
+<path d="{{rg.f0}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l0}}" fill="none"></path>
+<path d="{{rg.f1}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l1}}" fill="none"></path>
+<path d="{{rg.f2}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l2}}" fill="none"></path>
+<path d="{{rg.f3}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l3}}" fill="none"></path>
+<path d="{{rg.f4}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l4}}" fill="none"></path>
+<path d="{{rg.f5}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l5}}" fill="none"></path>
+<path d="{{rg.f6}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l6}}" fill="none"></path>
+<path d="{{rg.f7}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l7}}" fill="none"></path>
+<path d="{{rg.f8}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l8}}" fill="none"></path>
+<path d="{{rg.f9}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l9}}" fill="none"></path>
+<path d="{{rg.f10}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l10}}" fill="none"></path>
+<path d="{{rg.f11}}" fill="{{bg}}" stroke="none"></path><path d="{{rg.l11}}" fill="none" stroke-width="1.5"></path>
+</g>
+<circle cx="{{px}}" cy="{{py}}" r="2.5" fill="currentColor"></circle>
+<text x="88" y="164" text-anchor="middle" fill="currentColor" font-family="'Jersey 10', monospace" font-size="22" textLength="44" lengthAdjust="spacingAndGlyphs">{{time}}</text>
+<rect width="176" height="176" fill="url(#rg-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#rg-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<g fill="currentColor" text-anchor="middle">
+<text x="144" y="20" font-family="Silkscreen, monospace" font-size="8">HR</text>
+<text x="144" y="44" font-family="'Jersey 10', monospace" font-size="26">{{hr}}</text>
+<text x="144" y="56" font-family="Silkscreen, monospace" font-size="8">BPM</text>
+</g>
+<rect x="113" y="1" width="62" height="62" fill="url(#rg-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"demo":{"editor":"boolean","default":true,"section":"Анимация"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ t: Date.now() }), 100);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const demo = this.props.demo ?? true;
+    const nowMs = Date.now();
+    const now = new Date(nowMs);
+    const f = (v) => v.toFixed(1);
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    const hour = now.getHours();
+    const prog = demo ? (nowMs % 12000) / 12000 : now.getMinutes() / 60;
+    const v = (x, i) => {
+      const hh = (hour - 11 + i + 24) % 24;
+      let s = 0.18 + 0.1 * Math.sin(x * 0.13 + hh * 1.7) + 0.08 * Math.sin(x * 0.37 + hh * 0.9);
+      if (hh === 7 || hh === 18) s += 0.75 * Math.exp(-Math.pow((x - 88) / 16, 2));
+      s += 0.18 * Math.exp(-Math.pow((x - 40 - ((hh * 13) % 80)) / 3, 2));
+      if (hh < 6) s *= 0.4;
+      return Math.max(0, Math.min(1, s));
+    };
+    const rg = {};
+    let px = 28;
+    let py = 140;
+    let last = 0.2;
+    for (let i = 0; i < 12; i++) {
+      const base = 52 + i * 8;
+      const xEnd = i === 11 ? 28 + 120 * prog : 148;
+      let line = '';
+      let first = true;
+      let x;
+      for (x = 28; x <= xEnd + 0.001; x += 2) {
+        const val = v(x, i);
+        const y = base - 22 * val;
+        line += (first ? 'M' : 'L') + x + ' ' + f(y);
+        first = false;
+        if (i === 11) {
+          px = x;
+          py = y;
+          last = val;
+        }
+      }
+      if (first) line = 'M28 ' + base;
+      rg['l' + i] = line;
+      rg['f' + i] = line + 'L' + f(Math.max(28, xEnd)) + ' ' + (base + 8) + 'L28 ' + (base + 8) + 'Z';
+    }
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      rg: rg,
+      px: px,
+      py: f(py),
+      time: p2(now.getHours()) + ':' + p2(now.getMinutes()),
+      hr: String(52 + Math.round(70 * last))
+    };
+  }
+}
+</script>
+</body>
+</html>

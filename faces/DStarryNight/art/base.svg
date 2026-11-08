@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+
+<defs>
+<pattern id="sn-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="1" y="1" width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="sn-b12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#fff"></rect><rect x="2" y="2" width="1" height="1" fill="#fff"></rect></pattern>
+<pattern id="sn-b25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#fff"></rect></pattern>
+</defs>
+<g>
+<rect width="176" height="176" fill="#000"></rect>
+<rect x="0" y="96" width="176" height="14" fill="url(#sn-b12)"></rect>
+<rect x="0" y="110" width="176" height="14" fill="url(#sn-b25)"></rect>
+<g fill="#fff">
+<rect x="46" y="22" width="1" height="1"></rect>
+<rect x="62" y="34" width="1" height="1"></rect>
+<rect x="78" y="16" width="1" height="1"></rect>
+<rect x="104" y="30" width="1" height="1"></rect>
+<rect x="116" y="64" width="1" height="1"></rect>
+<rect x="130" y="74" width="1" height="1"></rect>
+<rect x="150" y="88" width="1" height="1"></rect>
+<rect x="160" y="70" width="1" height="1"></rect>
+<rect x="98" y="90" width="1" height="1"></rect>
+<rect x="14" y="90" width="1" height="1"></rect>
+<rect x="29" y="32" width="3" height="1"></rect>
+<rect x="30" y="31" width="1" height="3"></rect>
+<rect x="139" y="78" width="3" height="1"></rect>
+<rect x="140" y="77" width="1" height="3"></rect>
+<rect x="99" y="33" width="2" height="2"></rect>
+</g>
+<line x1="86" y1="22" x2="99" y2="33" stroke="#fff" stroke-width="1" stroke-dasharray="1 1"></line>
+
+
+<polygon points="0,128 18,112 34,120 56,96 72,110 90,100 112,118 134,94 156,112 176,104 176,176 0,176" fill="#fff"></polygon>
+<polygon points="0,128 18,112 34,120 56,96 72,110 90,100 112,118 134,94 156,112 176,104 176,176 0,176" fill="url(#sn-d50)"></polygon>
+<g fill="#fff">
+<polygon points="56,96 49,104 52,103 55,106 58,102 63,104"></polygon>
+<polygon points="90,100 84,104 87,103 90,106 93,103 95,104"></polygon>
+<polygon points="134,94 127,102 130,101 133,104 137,100 141,102"></polygon>
+</g>
+<polygon points="0,150 26,130 44,142 70,124 96,146 120,132 146,150 176,138 176,176 0,176" fill="#000"></polygon>
+<polyline points="0,150 26,130 44,142 70,124 96,146 120,132 146,150 176,138" fill="none" stroke="#fff" stroke-width="1"></polyline>
+<g fill="#fff">
+<polygon points="70,124 62,131 66,130 69,133 73,129 77,130"></polygon>
+<polygon points="120,132 114,137 117,136 120,138 123,136 126,137"></polygon>
+</g>
+
+</g>
+
+<g>
+<rect x="113" y="1" width="62" height="62" fill="#000"></rect>
+<g fill="#fff" text-anchor="middle">
+
+
+</g>
+<path d="M140 55 A4 4 0 0 1 148 55 Z" fill="#fff"></path>
+<rect x="134" y="55" width="20" height="1" fill="#fff"></rect>
+</g>
+
+</svg>

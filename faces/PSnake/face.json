@@ -1,0 +1,7 @@
+{"title": "PSnake Snake",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits ./"},
+  "time": {"family": "Jersey 10", "size": 28, "fit": ["14:32", 56], "chars": "$time"},
+  "num": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ },
+ "fake": "snake moves and apples eaten are simulated; only the snake base length and the K steps readout are real"}

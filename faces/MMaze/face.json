@@ -1,0 +1,5 @@
+{"title": "MMaze 10 Print Maze",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "dd": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ }}

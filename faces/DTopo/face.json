@@ -1,0 +1,7 @@
+{"title": "DTopo",
+ "permissions": ["SensorHistory"],
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 30, "fit": ["11:20", 52], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "alt": {"family": "Jersey 10", "size": 26, "fit": ["455", 34], "chars": "$digits-"}
+ }}

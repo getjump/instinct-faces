@@ -1,0 +1,6 @@
+{"title": "STrain Train Window",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 30, "fit": ["14:32", 56], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits -"},
+  "dist": {"family": "Jersey 10", "size": 26, "chars": "$digits.-"}
+ }}

@@ -1,0 +1,5 @@
+{"title": "X2 Maya",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 22, "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "SEC"}
+ }}

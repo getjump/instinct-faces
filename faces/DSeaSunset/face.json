@@ -1,0 +1,6 @@
+{"title": "DSeaSunset",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 34, "fit": ["17:05", 68], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "cd": {"family": "Jersey 10", "size": 26, "fit": ["12M", 32], "chars": "$digits:-M"}
+ }}

@@ -1,0 +1,55 @@
+{
+ "title": "T2 Swiss",
+ "fonts": {
+  "a0": {
+   "family": "Anton",
+   "size": 36,
+   "chars": "$upper-'"
+  },
+  "a1": {
+   "family": "Anton",
+   "size": 33,
+   "chars": "$upper-'"
+  },
+  "a2": {
+   "family": "Anton",
+   "size": 30,
+   "chars": "$upper-'"
+  },
+  "a3": {
+   "family": "Anton",
+   "size": 27,
+   "chars": "$upper-'"
+  },
+  "a4": {
+   "family": "Anton",
+   "size": 23,
+   "chars": "$upper-'"
+  },
+  "a5": {
+   "family": "Anton",
+   "size": 21,
+   "chars": "$upper-'"
+  },
+  "a6": {
+   "family": "Anton",
+   "size": 19,
+   "chars": "$upper-'"
+  },
+  "a7": {
+   "family": "Anton",
+   "size": 16,
+   "chars": "$upper-'"
+  },
+  "ss": {
+   "family": "Anton",
+   "size": 30,
+   "chars": "$digits-"
+  },
+  "lab": {
+   "family": "Silkscreen",
+   "size": 8,
+   "chars": "$upper$digits.- "
+  }
+ }
+}

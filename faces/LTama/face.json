@@ -1,0 +1,8 @@
+{"title": "LTama Pet",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits %!"},
+  "time": {"family": "Jersey 10", "size": 42, "fit": ["14:32", 76], "chars": "$time"},
+  "z8": {"family": "Silkscreen", "size": 8, "chars": "Z"},
+  "z10": {"family": "Silkscreen", "size": 10, "chars": "Z"},
+  "z12": {"family": "Silkscreen", "size": 12, "chars": "Z"}
+ }}

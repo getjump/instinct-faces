@@ -1,0 +1,6 @@
+{"title": "K7 Calc",
+ "fake": "key press demo with fixed sums (8412/10000, 24x60) after a wrist raise; the minutes-left-in-day sum is real",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits/X-.=+ "},
+  "dd": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ }}

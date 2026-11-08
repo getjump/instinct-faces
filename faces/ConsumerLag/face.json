@@ -1,0 +1,7 @@
+{"title": "ConsumerLag",
+ "fake": "LAG is a joke metric: steps left to the daily goal shown as consumer lag",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 50, "fit": ["14:32", 108], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits :."},
+  "lag": {"family": "Jersey 10", "size": 28, "fit": ["1.6K", 40], "chars": "$digits.K-"}
+ }}

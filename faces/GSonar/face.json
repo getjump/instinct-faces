@@ -1,0 +1,7 @@
+{"title": "GSonar Sonar",
+ "fake": "blip positions, the MSG and 15:00 blip labels and the 1 CAL count are simulated; the MSG count is the real notification count",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 26, "fit": ["14:32", 48], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits :"},
+  "brg": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ }}

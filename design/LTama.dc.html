@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Тамагочи</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Тамагочи»: пиксельный зверёк гуляет, моргает, просит прогулку или спит, сердце настроения бьётся в окошке">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="tm-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="tm-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="tm-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+<pattern id="tm-d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="currentColor"></rect></pattern>
+</defs>
+<g clip-path="url(#tm-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<g fill="currentColor">
+<text x="28" y="36" font-family="Silkscreen, monospace" font-size="8">{{date}}</text>
+<text x="24" y="74" font-family="'Jersey 10', monospace" font-size="42" textLength="86" lengthAdjust="spacingAndGlyphs">{{time}}</text>
+<text x="24" y="86" font-family="Silkscreen, monospace" font-size="8">{{meters}}</text>
+</g>
+<rect x="0" y="150" width="176" height="26" fill="url(#tm-d25)"></rect>
+<rect x="0" y="149" width="176" height="1" fill="currentColor"></rect>
+<path d="{{pet}}" fill="currentColor"></path>
+<g transform="{{bubbleTf}}" opacity="{{bubbleOp}}">
+<polygon points="3,106 9,106 -2,112" fill="currentColor"></polygon>
+<rect x="0.5" y="94.5" width="34" height="12" fill="{{bg}}" stroke="currentColor" stroke-width="1"></rect>
+<text x="17.5" y="103" text-anchor="middle" fill="currentColor" font-family="Silkscreen, monospace" font-size="8">WALK!</text>
+</g>
+<g fill="currentColor" font-family="Silkscreen, monospace" opacity="{{zOp}}">
+<text x="{{z0x}}" y="{{z0y}}" font-size="8">Z</text>
+<text x="{{z1x}}" y="{{z1y}}" font-size="10">Z</text>
+<text x="{{z2x}}" y="{{z2y}}" font-size="12">Z</text>
+</g>
+<rect width="176" height="176" fill="url(#tm-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#tm-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<g transform="{{heartTf}}">
+<polygon points="0,6 -8,-2 -8,-5 -5,-8 -2,-8 0,-5 2,-8 5,-8 8,-5 8,-2" fill="currentColor"></polygon>
+</g>
+<text x="144" y="56" text-anchor="middle" fill="currentColor" font-family="Silkscreen, monospace" font-size="8">{{mood}}</text>
+<rect x="113" y="1" width="62" height="62" fill="url(#tm-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ t: Date.now() }), 100);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  sprite(rows, ox, oy, s) {
+    let d = '';
+    for (let r = 0; r < rows.length; r++) {
+      const row = rows[r];
+      let c = 0;
+      while (c < row.length) {
+        if (row[c] === '1') {
+          let e = c;
+          while (e < row.length && row[e] === '1') e++;
+          d += 'M' + (ox + c * s) + ' ' + (oy + r * s) + 'h' + ((e - c) * s) + 'v' + s + 'h' + (-(e - c) * s) + 'z';
+          c = e;
+        } else {
+          c++;
+        }
+      }
+    }
+    return d;
+  }
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const nowMs = Date.now();
+    const t = nowMs / 1000;
+    const now = new Date(nowMs);
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    const mons = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const states = ['HAPPY', 'HUNGRY', 'SLEEPY'];
+    const st = states[Math.floor(t / 7) % 3];
+    const blink = (t % 4) < 0.18;
+    const closed = st === 'SLEEPY' || blink;
+    const walking = st !== 'SLEEPY';
+    const frame = walking ? Math.floor(t / 0.4) % 2 : 0;
+    const petX = walking ? Math.round(52 + 28 * Math.sin(t * 0.5)) : 60;
+    const bounce = walking && frame === 1 ? 2 : 0;
+    let mouth1 = '1111101111011111';
+    let mouth2 = '1111110000111111';
+    if (st === 'HUNGRY') {
+      mouth1 = '1111111001111111';
+      mouth2 = '1111111001111111';
+    } else if (st === 'SLEEPY') {
+      mouth1 = '1111111111111111';
+    }
+    const rows = [
+      '0000011111100000',
+      '0001111111111000',
+      '0011111111111100',
+      '0111111111111110',
+      closed ? '0111111111111110' : '0111001111001110',
+      '1111001111001111',
+      '1111111111111111',
+      '1111111111111111',
+      mouth1,
+      mouth2,
+      '0111111111111110',
+      '0011111111111100',
+      frame === 1 ? '0011000000001100' : '0001100000011000',
+      frame === 1 ? '0111100000011110' : '0011110000111100'
+    ];
+    const pet = this.sprite(rows, petX, 106 - bounce, 3);
+    const bx = Math.min(petX + 50, 132);
+    let hs = 0.9 + 0.05 * Math.sin(t * 2);
+    if (st === 'HAPPY') hs = Math.floor(t / 0.5) % 2 ? 1.25 : 1;
+    if (st === 'HUNGRY') hs = 0.8;
+    const zy = (i) => (104 - ((t * 8 + i * 6) % 16)).toFixed(1);
+    const food = st === 'HUNGRY' ? 12 : 84;
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      date: days[now.getDay()] + ' ' + p2(now.getDate()) + ' ' + mons[now.getMonth()],
+      time: p2(now.getHours()) + ':' + p2(now.getMinutes()),
+      meters: 'FOOD ' + food + ' FUN 72 ZZ 7H',
+      pet: pet,
+      bubbleTf: 'translate(' + bx + ' 0)',
+      bubbleOp: st === 'HUNGRY' ? 1 : 0,
+      zOp: st === 'SLEEPY' ? 1 : 0,
+      z0x: 108, z0y: zy(0),
+      z1x: 115, z1y: zy(1),
+      z2x: 123, z2y: zy(2),
+      heartTf: 'translate(144 30) scale(' + hs.toFixed(2) + ')',
+      mood: st
+    };
+  }
+}
+</script>
+</body>
+</html>

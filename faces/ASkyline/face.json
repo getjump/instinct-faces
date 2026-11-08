@@ -1,0 +1,6 @@
+{"title": "ASkyline Skyline",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 28, "fit": ["14:32", 54], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "TODAYSMWF%$digits"},
+  "st": {"family": "Jersey 10", "size": 22, "chars": "$digits"}
+ }}

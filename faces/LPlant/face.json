@@ -1,0 +1,6 @@
+{"title": "LPlant Plant",
+ "fonts": {
+  "hm": {"family": "Jersey 10", "size": 38, "fit": ["14", 36], "chars": "$digits"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits %"},
+  "sol": {"family": "Jersey 10", "size": 24, "chars": "$digits%-"}
+ }}

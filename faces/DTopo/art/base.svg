@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+
+<defs>
+<pattern id="tp-d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="1" width="1" height="1" fill="#000"></rect><rect y="1" width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="tp-d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="1" y="1" width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="tp-d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect></pattern>
+<pattern id="tp-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"></rect><rect x="2" y="2" width="1" height="1" fill="#000"></rect></pattern>
+</defs>
+<g>
+<rect width="176" height="176" fill="#fff"></rect>
+<ellipse cx="80" cy="104" rx="96" ry="74" transform="rotate(-10 80 104)" fill="url(#tp-d12)" stroke="#000" stroke-width="1"></ellipse>
+<ellipse cx="142" cy="150" rx="30" ry="18" transform="rotate(15 142 150)" fill="#fff"></ellipse>
+<ellipse cx="142" cy="150" rx="30" ry="18" transform="rotate(15 142 150)" fill="url(#tp-d25)" stroke="#000" stroke-width="1"></ellipse>
+<ellipse cx="144" cy="150" rx="15" ry="8" transform="rotate(15 144 150)" fill="#fff"></ellipse>
+<ellipse cx="144" cy="150" rx="15" ry="8" transform="rotate(15 144 150)" fill="url(#tp-d50)" stroke="#000" stroke-width="1"></ellipse>
+<ellipse cx="76" cy="102" rx="72" ry="56" transform="rotate(-18 76 102)" fill="#fff"></ellipse>
+<ellipse cx="76" cy="102" rx="72" ry="56" transform="rotate(-18 76 102)" fill="url(#tp-d25)" stroke="#000" stroke-width="1"></ellipse>
+<ellipse cx="72" cy="100" rx="52" ry="40" transform="rotate(-25 72 100)" fill="#fff"></ellipse>
+<ellipse cx="72" cy="100" rx="52" ry="40" transform="rotate(-25 72 100)" fill="url(#tp-d50)" stroke="#000" stroke-width="1"></ellipse>
+<ellipse cx="70" cy="98" rx="32" ry="25" transform="rotate(-30 70 98)" fill="#fff"></ellipse>
+<ellipse cx="70" cy="98" rx="32" ry="25" transform="rotate(-30 70 98)" fill="url(#tp-d75)" stroke="#000" stroke-width="1"></ellipse>
+<ellipse cx="69" cy="97" rx="14" ry="10" transform="rotate(-30 69 97)" fill="#000"></ellipse>
+<polygon points="69,92 64,100 74,100" fill="#fff"></polygon>
+<path d="M8 52 Q34 66 38 88 T40 132 T30 176" fill="none" stroke="#000" stroke-width="4"></path>
+<path d="M8 52 Q34 66 38 88 T40 132 T30 176" fill="none" stroke="#fff" stroke-width="2"></path>
+<path d="M24 120 Q46 100 66 112 T100 112" fill="none" stroke="#fff" stroke-width="3"></path>
+<path d="M24 120 Q46 100 66 112 T100 112" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="1 2"></path>
+<g stroke="#fff" stroke-width="3">
+<line x1="100" y1="103" x2="100" y2="106"></line>
+<line x1="100" y1="118" x2="100" y2="121"></line>
+<line x1="91" y1="112" x2="94" y2="112"></line>
+<line x1="106" y1="112" x2="109" y2="112"></line>
+</g>
+<g stroke="#000" stroke-width="1">
+<line x1="100.5" y1="103" x2="100.5" y2="106"></line>
+<line x1="100.5" y1="118" x2="100.5" y2="121"></line>
+<line x1="91" y1="112.5" x2="94" y2="112.5"></line>
+<line x1="106" y1="112.5" x2="109" y2="112.5"></line>
+</g>
+<circle cx="100.5" cy="112.5" r="4.5" fill="#fff" stroke="#000" stroke-width="1"></circle>
+<rect x="99" y="111" width="3" height="3" fill="#000"></rect>
+<rect x="30.5" y="26.5" width="66" height="12" fill="#fff" stroke="#000" stroke-width="1"></rect>
+
+<rect x="50.5" y="128.5" width="76" height="32" fill="#fff" stroke="#000" stroke-width="1"></rect>
+
+</g>
+
+<g>
+<rect x="113" y="1" width="62" height="62" fill="#fff"></rect>
+<g fill="#000" text-anchor="middle">
+
+
+
+</g>
+</g>
+
+</svg>

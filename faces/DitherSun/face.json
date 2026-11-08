@@ -1,0 +1,5 @@
+{"title": "04 Dither Sun",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 34, "fit": ["14:32", 68], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "}
+ }}

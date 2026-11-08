@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="46" viewBox="0 90 80 46" shape-rendering="crispEdges">
+<defs>
+<pattern id="tr-d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/></pattern>
+</defs>
+<path d="M0 136L0 112L20 96L34 104L52 90L80 112L80 136Z" fill="url(#tr-d25)"/>
+</svg>

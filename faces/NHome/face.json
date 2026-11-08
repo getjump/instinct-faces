@@ -1,0 +1,8 @@
+{"title": "N3 Home",
+ "fake": "origin is the constant home point Tashkent 41.31N 69.28E (design's TAS) whenever there is no GPS fix; destinations Tbilisi/Belgrade/Tokyo/Sakhalin are the design's demo cycle. With a fix the origin is the real position (label HERE)",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 22, "fit": ["14:32", 42], "chars": "$time"},
+  "dist": {"family": "Jersey 10", "size": 24, "chars": "$digits"},
+  "from": {"family": "Jersey 10", "size": 24, "chars": "TASHERE"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits ."}
+ }}

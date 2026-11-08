@@ -1,0 +1,38 @@
+{
+ "title": "X1 Runes",
+ "fonts": {
+  "rn": {
+   "family": "Noto Sans Runic",
+   "size": 60,
+   "chars": "ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ"
+  },
+  "rs": {
+   "family": "Noto Sans Runic",
+   "size": 12,
+   "chars": "ᛋᛖᚲ"
+  },
+  "lab": {
+   "family": "Silkscreen",
+   "size": 8,
+   "chars": "$upper$digits "
+  },
+  "mean": {
+   "family": "Cormorant Garamond",
+   "size": 12,
+   "weight": 700,
+   "chars": "богатсвуреликнпьфджёйцТюзчИ"
+  },
+  "time": {
+   "family": "Cormorant Garamond",
+   "size": 22,
+   "weight": 700,
+   "chars": "$time"
+  },
+  "ss": {
+   "family": "Cormorant Garamond",
+   "size": 24,
+   "weight": 700,
+   "chars": "$digits-"
+  }
+ }
+}

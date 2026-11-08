@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="9" viewBox="18 70 140 9" shape-rendering="crispEdges">
+<defs>
+<pattern id="tr-d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+</defs>
+<rect x="18" y="70" width="140" height="9" fill="url(#tr-d12)"/>
+</svg>

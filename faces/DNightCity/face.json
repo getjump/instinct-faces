@@ -1,0 +1,6 @@
+{"title": "DNightCity",
+ "fonts": {
+  "time": {"family": "Jersey 10", "size": 44, "fit": ["21:10", 70], "chars": "$time"},
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "},
+  "st": {"family": "Jersey 10", "size": 26, "fit": ["8.4K", 36], "chars": "$digits.K"}
+ }}

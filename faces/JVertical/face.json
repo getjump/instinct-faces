@@ -1,0 +1,7 @@
+{"title": "J3 Vertical",
+ "fonts": {
+  "k26": {"family": "Shippori Mincho", "size": 26, "weight": 800, "chars": "零一二三四五六七八九十時分"},
+  "k11": {"family": "Shippori Mincho", "size": 11, "weight": 800, "chars": "零一二三四五六七八九十月日秒"},
+  "k12": {"family": "Shippori Mincho", "size": 12, "weight": 800, "chars": "日月火水木金土曜"},
+  "sec": {"family": "Shippori Mincho", "size": 24, "weight": 800, "chars": "$digits-"}
+ }}

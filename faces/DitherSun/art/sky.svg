@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+<defs>
+<pattern id="d75" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" width="1" height="1" fill="#000"/><rect y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/></pattern>
+<pattern id="d12" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="2" y="2" width="1" height="1" fill="#000"/></pattern>
+</defs>
+<rect width="176" height="176" fill="#fff"/>
+<rect x="0" y="0" width="176" height="44" fill="url(#d75)"/>
+<rect x="0" y="44" width="176" height="26" fill="url(#d50)"/>
+<rect x="0" y="70" width="176" height="26" fill="url(#d25)"/>
+<rect x="0" y="96" width="176" height="26" fill="url(#d12)"/>
+<path d="M18 122 A70 50 0 0 1 158 122" fill="none" stroke="#fff" stroke-width="3" shape-rendering="auto"/>
+<path d="M18 122 A70 50 0 0 1 158 122" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="1 2" shape-rendering="auto"/>
+<rect x="113" y="1" width="62" height="62" fill="#000"/>
+<rect x="126" y="14" width="1" height="1" fill="#fff"/>
+<rect x="158" y="12" width="1" height="1" fill="#fff"/>
+<rect x="130" y="44" width="1" height="1" fill="#fff"/>
+<rect x="160" y="45" width="1" height="1" fill="#fff"/>
+</svg>

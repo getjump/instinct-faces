@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 176 176" shape-rendering="crispEdges">
+<defs>
+<pattern id="d50" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/><rect x="1" y="1" width="1" height="1" fill="#000"/></pattern>
+<pattern id="d25" width="2" height="2" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#000"/></pattern>
+</defs>
+<rect width="176" height="176" fill="#fff"/>
+<rect width="176" height="158" fill="url(#d25)"/>
+<rect x="0" y="158" width="176" height="18" fill="#fff"/><rect x="0" y="158" width="176" height="18" fill="url(#d50)"/><rect x="0" y="157" width="176" height="1" fill="#000"/>
+<rect x="78" y="134" width="44" height="5" fill="#000"/><polygon points="82,139 118,139 113,157 87,157" fill="#000" shape-rendering="auto"/>
+</svg>

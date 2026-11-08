@@ -1,0 +1,6 @@
+{"title": "K2 One Hand",
+ "fonts": {
+  "dd": {"family": "Space Grotesk", "size": 22, "weight": 500, "chars": "$digits"},
+  "ap": {"family": "Space Grotesk", "size": 11, "weight": 500, "chars": "$digits~: "},
+  "dow": {"family": "Silkscreen", "size": 8, "chars": "$upper"}
+ }}

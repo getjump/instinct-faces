@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Счётчик 90/180</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;family=Silkscreen:wght@400;700&amp;family=VT323&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#555}a:hover{color:#222}
+</style>
+</helmet>
+<div style="width: 480px; height: 560px; background: #e4e2dc; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 240 280" width="480" height="560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Циферблат «Счётчик 90/180»: сетка последних 180 дней, дни внутри зоны залиты, сегодняшний мигает, крупно — сколько дней осталось из 90, статус сегодня в окошке; данные примерные">
+<rect x="66" y="0" width="108" height="280" rx="12" fill="#1c1d1a"></rect>
+<rect x="84" y="10" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="20" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="256" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="84" y="266" width="72" height="4" rx="2" fill="#2a2b27"></rect>
+<rect x="6" y="82" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="131" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="6" y="180" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="100" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<rect x="222" y="162" width="12" height="18" rx="3" fill="{{caseColor}}" stroke="#000" stroke-opacity="0.3"></rect>
+<polygon points="52,36 188,36 226,74 226,206 188,244 52,244 14,206 14,74" fill="{{caseColor}}"></polygon>
+<polygon points="56,44 184,44 218,78 218,202 184,236 56,236 22,202 22,78" fill="#000" fill-opacity="0.2"></polygon>
+<circle cx="120" cy="140" r="97" fill="#111210"></circle>
+<circle cx="176" cy="84" r="38" fill="#111210"></circle>
+<svg x="32" y="52" width="176" height="176" viewBox="0 0 176 176" style="color: {{ink}}">
+<defs>
+<clipPath id="vs-main"><circle cx="88" cy="88" r="88"></circle></clipPath>
+<clipPath id="vs-sub"><circle cx="144" cy="32" r="31"></circle></clipPath>
+<pattern id="vs-grid" width="1" height="1" patternUnits="userSpaceOnUse"><path d="M1 0V1H0" fill="none" stroke="currentColor" stroke-width="0.12" stroke-opacity="0.09"></path></pattern>
+</defs>
+<g clip-path="url(#vs-main)">
+<rect width="176" height="176" fill="{{bg}}"></rect>
+<g fill="currentColor">
+<text x="30" y="40" font-family="Silkscreen, monospace" font-size="8">{{time}}</text>
+<text x="30" y="68" font-family="'Jersey 10', monospace" font-size="36">{{left}}</text>
+<text x="66" y="58" font-family="Silkscreen, monospace" font-size="8">DAYS</text>
+<text x="66" y="68" font-family="Silkscreen, monospace" font-size="8">LEFT</text>
+</g>
+<path d="{{inDays}}" fill="currentColor"></path>
+<path d="{{outDays}}" fill="currentColor"></path>
+<rect x="135.5" y="129.5" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1" opacity="{{blink}}"></rect>
+<g fill="currentColor" font-family="Silkscreen, monospace" font-size="8" text-anchor="middle">
+<text x="88" y="150" opacity="{{warnOp}}">{{used}}</text>
+<text x="88" y="162">WINDOW 180D</text>
+</g>
+<rect width="176" height="176" fill="url(#vs-grid)"></rect>
+</g>
+<circle cx="144" cy="32" r="34.5" fill="#111210"></circle>
+<g clip-path="url(#vs-sub)">
+<rect x="113" y="1" width="62" height="62" fill="{{bg}}"></rect>
+<g fill="currentColor" text-anchor="middle">
+<text x="144" y="20" font-family="Silkscreen, monospace" font-size="8">ZONE</text>
+<text x="144" y="44" font-family="'Jersey 10', monospace" font-size="26">{{status}}</text>
+<text x="144" y="56" font-family="Silkscreen, monospace" font-size="8">TODAY</text>
+</g>
+<rect x="113" y="1" width="62" height="62" fill="url(#vs-grid)"></rect>
+</g>
+</svg>
+</svg>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["light","dark"],"default":"light","section":"Экран"},"caseColor":{"editor":"color","options":["#2b2d29","#56603f","#b5472b","#cfc9ba"],"default":"#2b2d29","section":"Корпус"},"demo":{"editor":"boolean","default":true,"section":"Анимация"},"$preview":{"width":480,"height":560}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ t: Date.now() }), 150);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  renderVals() {
+    const dark = (this.props.mode ?? 'light') === 'dark';
+    const demo = this.props.demo ?? true;
+    const nowMs = Date.now();
+    const t = nowMs / 1000;
+    const now = new Date(nowMs);
+    const p2 = (v) => (v < 10 ? '0' : '') + v;
+    if (!this.tl) {
+      const stays = [20, 35, 15, 40, 25, 30];
+      const gaps = [25, 30, 50, 20, 45, 40];
+      const tl = [];
+      let k = 0;
+      while (tl.length < 900) {
+        for (let i = 0; i < gaps[k % 6]; i++) tl.push(0);
+        for (let i = 0; i < stays[k % 6]; i++) tl.push(1);
+        k++;
+      }
+      this.tl = tl;
+    }
+    const start = demo ? Math.floor(nowMs / 600) % 600 : 300;
+    const win = this.tl.slice(start, start + 180);
+    let used = 0;
+    let inDays = '';
+    let outDays = '';
+    for (let i = 0; i < 180; i++) {
+      const x = 34 + (i % 18) * 6;
+      const y = 76 + Math.floor(i / 18) * 6;
+      if (win[i]) {
+        used++;
+        inDays += 'M' + x + ' ' + y + 'h5v5h-5z';
+      } else {
+        outDays += 'M' + (x + 2) + ' ' + (y + 2) + 'h1v1h-1z';
+      }
+    }
+    const left = Math.max(0, 90 - used);
+    const over = used > 90;
+    const blinkOn = Math.floor(t * 2) % 2 === 0;
+    return {
+      bg: dark ? '#141512' : '#c6c9bc',
+      ink: dark ? '#d7dacd' : '#161713',
+      caseColor: this.props.caseColor ?? '#2b2d29',
+      time: p2(now.getHours()) + ':' + p2(now.getMinutes()),
+      left: String(left),
+      inDays: inDays || 'M0 0',
+      outDays: outDays || 'M0 0',
+      blink: blinkOn ? 1 : 0,
+      used: over ? 'OVERSTAY ' + used + '/90' : 'USED ' + used + '/90',
+      warnOp: over && !blinkOn ? 0 : 1,
+      status: win[179] ? 'IN' : 'OUT'
+    };
+  }
+}
+</script>
+</body>
+</html>

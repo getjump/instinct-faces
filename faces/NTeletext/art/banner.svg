@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="18" viewBox="0 48 176 18" shape-rendering="crispEdges">
+<rect x="0" y="48" width="176" height="18" fill="#000"/>
+<text x="26" y="63" fill="#fff" font-family="'Jersey 10', monospace" font-size="18">TELETEXT</text>
+<g fill="#fff"><rect x="92" y="51" width="3" height="4"/><rect x="95" y="55" width="3" height="4"/><rect x="98" y="51" width="3" height="4"/><rect x="98" y="59" width="3" height="4"/><rect x="101" y="55" width="3" height="4"/><rect x="104" y="51" width="3" height="4"/></g>
+</svg>

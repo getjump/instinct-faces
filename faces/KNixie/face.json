@@ -1,0 +1,4 @@
+{"title": "K4 Nixie",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits "}
+ }}

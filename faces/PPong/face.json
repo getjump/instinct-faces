@@ -1,0 +1,7 @@
+{"title": "PPong Pong",
+ "fonts": {
+  "lab": {"family": "Silkscreen", "size": 8, "chars": "$upper$digits !"},
+  "score": {"family": "Jersey 10", "size": 30, "chars": "$digits"},
+  "num": {"family": "Jersey 10", "size": 26, "chars": "$digits"}
+ },
+ "fake": "ball, paddles and rally count are simulated; the left paddle misses when the minute changes"}
