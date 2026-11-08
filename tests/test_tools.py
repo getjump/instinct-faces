@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 
 import build
 import check
+import gallery
 
 
 def test_png_roundtrip(tmp_path):
@@ -55,3 +56,16 @@ def test_meta_rejects_family_missing_from_design():
 def test_every_face_has_a_unique_title():
     titles = [json.load(open(os.path.join(check.ROOT, "faces", n, "face.json")))["title"] for n in check.faces()]
     assert len(titles) == len(set(titles))
+
+
+@pytest.mark.parametrize("name", sorted(gallery.CLOCK_TEXT))
+def test_clock_samples_become_holes(name):
+    design = gallery.parse_design(name)
+    assert set(design["clock"]) == {f"c{i}" for i in range(len(gallery.CLOCK_TEXT[name]))}
+    for key in design["clock"]:
+        assert design["template"].count(f"{{{{clock.{key}}}}}") == 1
+
+
+def test_clock_sample_must_match_once():
+    with pytest.raises(ValueError, match="occurs 0 times"):
+        gallery.live_clock("Main", "<text>12:00</text>")

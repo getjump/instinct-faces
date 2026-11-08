@@ -76,7 +76,7 @@ python3 tools/shot.py Main           # macOS: run in the simulator, write build/
 
 `python3 tools/gallery.py` builds the site into `_site/` from `site/`, the designs, `refs/` and `previews/`; `python3 -m http.server -d _site` serves it. GitHub Pages runs the same command on every push to `main`. `--sheet docs/faces.png` also redraws the picture above.
 
-Each card runs the original design (`design/<Name>.dc.html`) in a sandboxed `srcdoc` iframe without `allow-same-origin`. The page and the frames talk over `postMessage`; a shared virtual clock replaces `Date` inside the frames, so every face follows the clock controls. Frames mount only while visible. Design scripts come from this repository only: the gallery never loads third-party code into a frame.
+Each card runs the original design (`design/<Name>.dc.html`) in a sandboxed `srcdoc` iframe without `allow-same-origin`. The page and the frames talk over `postMessage`; a shared virtual clock replaces `Date` inside the frames, so every face follows the clock controls. Frames mount only while visible. Design scripts come from this repository only: the gallery never loads third-party code into a frame. Twelve designs are static mockups with sample time as plain text; `CLOCK_TEXT` in `tools/gallery.py` maps each sample to a clock format, so they show the virtual time too.
 
 The "Watch build" view shows `previews/<Name>.png`, the frames captured from the simulator, tinted for the chosen screen.
 

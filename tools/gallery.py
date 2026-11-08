@@ -40,6 +40,28 @@ SECTIONS = [
     ("scripts", "Scripts and glyphs"),
 ]
 EXTRA_SECTION = {"Ascent": "dither"}
+HM = "{hh}:{mi}"
+DATE = "{WD} {dd} {MON}"
+CLOCK_TEXT = {
+    "Main": {"14:32": HM, "fri 06 nov": "{wd} {dd} {mon}", "47": "{ss}"},
+    "ConsumerLag": {"14:32": HM, "FRI 06 NOV": DATE},
+    "Nomad": {
+        "14:32": HM,
+        "UTC+5": "UTC{tz}",
+        "UTC 09:32": "UTC {hh@UTC}:{mi@UTC}",
+        "TYO +4": "TYO {off@Asia/Tokyo}",
+        "18:32": "{hh@Asia/Tokyo}:{mi@Asia/Tokyo}",
+    },
+    "DitherSun": {"14:32": HM, "FRI 06": "{WD} {dd}"},
+    "Brutal": {"14": "{hh}", "32": "{mi}", "FRI": "{WD}", "06.11": "{dd}.{mo}", "47": "{ss}"},
+    "Roguelike": {"14:32": HM, "FRI DAY 310": "{WD} DAY {doy}"},
+    "DStarryNight": {"22:47": HM, "SAT 07 NOV": DATE},
+    "DSeaSunset": {"17:05": HM, "SAT 07": "{WD} {dd}"},
+    "DFuji": {"07:40": HM, "SAT 07 NOV": DATE, "11:40": "{hh@Asia/Tokyo}:{mi@Asia/Tokyo}"},
+    "DNightCity": {"21:10": HM, "SAT 07 NOV": DATE},
+    "DTopo": {"11:20": HM, "SAT 07 NOV": DATE},
+    "DRain": {"09:15": HM, "SAT 07": "{WD} {dd}"},
+}
 DISPLAY = '<svg x="32" y="52" width="176" height="176"'
 SIZE = 176
 SCREEN = {"light": ((0x16, 0x17, 0x13), (0xC6, 0xC9, 0xBC)), "dark": ((0xD7, 0xDA, 0xCD), (0x14, 0x15, 0x12))}
@@ -48,6 +70,18 @@ SCREEN = {"light": ((0x16, 0x17, 0x13), (0xC6, 0xC9, 0xBC)), "dark": ((0xD7, 0xD
 def read(path):
     with open(path, encoding="utf8") as f:
         return f.read()
+
+
+def live_clock(name, template):
+    """Static designs carry sample time and date as plain text: turn each sample into a clock hole for frame.js."""
+    clock = {}
+    for i, (sample, fmt) in enumerate(CLOCK_TEXT.get(name, {}).items()):
+        needle = f">{sample}<"
+        if template.count(needle) != 1:
+            raise ValueError(f"{name}: clock sample {sample!r} occurs {template.count(needle)} times, expected once")
+        template = template.replace(needle, f">{{{{clock.c{i}}}}}<")
+        clock[f"c{i}"] = fmt
+    return template, clock
 
 
 def parse_design(name):
@@ -68,12 +102,14 @@ def parse_design(name):
         spec.pop("section", None)
     fonts = re.findall(r'<link rel="stylesheet" href="(https://fonts\.googleapis\.com/[^"]+)"', helmet)
     styles = re.findall(r"<style>(.*?)</style>", helmet, re.S)
+    template, clock = live_clock(name, template)
     return {
         "fonts": [html.unescape(f) for f in fonts],
         "style": "\n".join(styles),
         "template": template,
         "script": script,
         "props": props,
+        "clock": clock,
     }
 
 
@@ -192,6 +228,7 @@ def build(out, repo):
                 "permissions": meta.get("permissions", []),
                 "design": bool(design),
                 "animated": bool(design and re.search(r"\bDate\b|setInterval", design["script"])),
+                "clock": bool(design and design["clock"]),
                 "props": design["props"] if design else {},
             }
         )

@@ -5,6 +5,7 @@ const SCREEN = {
 };
 const PROP_LABELS = { mode: "Screen", caseColor: "Case", demo: "Demo motion", rule: "Rule" };
 const PREFS_KEY = "instinct-faces:prefs";
+const SPEEDS = [1, 60, 600, 0];
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const el = (tag, attrs = {}, ...kids) => {
@@ -190,7 +191,7 @@ const observer = new IntersectionObserver(
 function tagList(face) {
   const tags = [];
   if (!face.design) tags.push(el("span", { class: "tag", text: "watch only" }));
-  else tags.push(el("span", { class: "tag", text: face.animated ? "animated" : "static" }));
+  else tags.push(el("span", { class: "tag", text: face.animated ? "animated" : face.clock ? "live clock" : "static" }));
   if (face.fake) tags.push(el("span", { class: "tag warn", title: face.fake, text: "simulated data" }));
   return tags;
 }
@@ -212,7 +213,7 @@ function renderGallery() {
       const stage = new Stage(face);
       const card = el(
         "article",
-        { class: "card" },
+        { class: "card", "data-name": face.name },
         el(
           "button",
           { class: "card-open", type: "button", "aria-label": `Open ${face.title}`, onclick: () => openDetail(face) },
@@ -291,6 +292,7 @@ function bindToolbar() {
     const { name, value, checked } = ev.target;
     if (name === "speed") {
       setClock({ speed: Number(value) });
+      paintSpeed();
       return;
     }
     if (name === "demo") prefs.demo = checked;
@@ -310,8 +312,30 @@ function bindToolbar() {
     form.querySelector('input[name="speed"][value="1"]').checked = true;
     $("#clock-set").value = "";
     setClock({ base: Date.now(), anchor: Date.now(), speed: 1 });
+    paintSpeed();
   });
-  const readout = $("#clock-readout");
+  const pill = $("#clock-pill");
+  const pillSpeed = $("#pill-speed");
+  const paintSpeed = () => {
+    pillSpeed.textContent = clock.speed ? `${clock.speed}x` : "Pause";
+  };
+  pillSpeed.addEventListener("click", () => {
+    const next = SPEEDS[(SPEEDS.indexOf(clock.speed) + 1) % SPEEDS.length];
+    form.querySelector(`input[name="speed"][value="${next}"]`).checked = true;
+    setClock({ speed: next });
+    paintSpeed();
+  });
+  let clockInView = true;
+  const showPill = () => {
+    pill.hidden = clockInView || prefs.view !== "live";
+  };
+  new IntersectionObserver(([entry]) => {
+    clockInView = entry.isIntersecting;
+    showPill();
+  }).observe($(".group.clock"));
+  form.addEventListener("change", showPill);
+  paintSpeed();
+  const readouts = [$("#clock-readout"), $("#pill-readout")];
   const fmt = new Intl.DateTimeFormat("en-GB", {
     weekday: "short",
     hour: "2-digit",
@@ -320,7 +344,8 @@ function bindToolbar() {
     hour12: false,
   });
   const tick = () => {
-    readout.textContent = fmt.format(new Date(virtualNow())).replace(",", "");
+    const text = fmt.format(new Date(virtualNow())).replace(",", "");
+    for (const r of readouts) r.textContent = text;
   };
   tick();
   setInterval(tick, 250);
